@@ -23,5 +23,12 @@ namespace LumberInventoryManager
             DialogResult result = addProduct.ShowDialog();
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            List<Product> products = ProductDb.GetAllProducts();
+            productListBox.DataSource = products;
+            productListBox.DisplayMember = nameof(Product.ToString);
+        }
     }
 }
