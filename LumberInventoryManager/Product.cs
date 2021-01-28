@@ -39,5 +39,10 @@ namespace LumberInventoryManager
         /// The amount of units sold. Default is zero
         /// </summary>
         public short Sold { get; set; } = 0;
+
+        public override string ToString()
+        {
+            return Height + " x " + Width + " x " + Length + " In Stock " + OnHand + " Sold " + Sold;
+        }
     }
 }
