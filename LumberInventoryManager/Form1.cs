@@ -19,7 +19,9 @@ namespace LumberInventoryManager
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-            
+            AddProduct addProduct = new AddProduct();
+            DialogResult result = addProduct.ShowDialog();
+
         }
     }
 }

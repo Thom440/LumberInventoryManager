@@ -16,5 +16,30 @@ namespace LumberInventoryManager
         {
             InitializeComponent();
         }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            Product product = new Product()
+            {
+                Height = Convert.ToByte(heightTxtBox.Text),
+                Width = Convert.ToByte(widthTxtBox.Text),
+                Length = Convert.ToByte(lengthTxtBox.Text)
+            };
+
+            ProductDb.Add(product);
+            ClearTxtBox();
+        }
+
+        private void ClearTxtBox()
+        {
+            heightTxtBox.Text = "";
+            widthTxtBox.Text = "";
+            lengthTxtBox.Text = "";
+        }
+
+        private void CancelBtn_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
