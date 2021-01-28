@@ -22,5 +22,17 @@ namespace LumberInventoryManager
                 return p;
             }
         }
+
+        public static List<Product> GetAllProducts()
+        {
+            using(LumberContext context = new LumberContext())
+            {
+                List<Product> allProducts =
+                    (from p in context.Products
+                     select p).ToList();
+
+                return allProducts;
+            }
+        }
     }
 }
