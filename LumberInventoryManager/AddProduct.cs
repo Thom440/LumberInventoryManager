@@ -19,15 +19,24 @@ namespace LumberInventoryManager
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-            Product product = new Product()
+            if (Validator.IsByte(heightTxtBox.Text) && Validator.IsByte(widthTxtBox.Text) && 
+                Validator.IsByte(lengthTxtBox.Text))
             {
-                Height = Convert.ToByte(heightTxtBox.Text),
-                Width = Convert.ToByte(widthTxtBox.Text),
-                Length = Convert.ToByte(lengthTxtBox.Text)
-            };
+                Product product = new Product()
+                {
+                    Height = Convert.ToByte(heightTxtBox.Text),
+                    Width = Convert.ToByte(widthTxtBox.Text),
+                    Length = Convert.ToByte(lengthTxtBox.Text)
+                };
 
-            ProductDb.Add(product);
-            ClearTxtBox();
+                ProductDb.Add(product);
+                ClearTxtBox();
+            }
+            else
+            {
+                MessageBox.Show("All fields must be numbers", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            
         }
 
         private void ClearTxtBox()
