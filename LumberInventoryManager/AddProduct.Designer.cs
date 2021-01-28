@@ -98,6 +98,7 @@ namespace LumberInventoryManager
             this.addBtn.TabIndex = 6;
             this.addBtn.Text = "Add Product";
             this.addBtn.UseVisualStyleBackColor = true;
+            this.addBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // cancelBtn
             // 
@@ -107,6 +108,7 @@ namespace LumberInventoryManager
             this.cancelBtn.TabIndex = 7;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = true;
+            this.cancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
             // 
             // AddProduct
             // 
