@@ -21,7 +21,7 @@ namespace LumberInventoryManager
         {
             AddProduct addProduct = new AddProduct();
             DialogResult result = addProduct.ShowDialog();
-
+            UpdateList();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -35,12 +35,23 @@ namespace LumberInventoryManager
         {
             UpdateInventoryForm updateInventory = new UpdateInventoryForm();
             DialogResult result = updateInventory.ShowDialog();
+            UpdateList();
         }
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
             Product product = (Product)productListBox.SelectedItem;
             ProductDb.Delete(product.ProductID);
+            UpdateList();
+        }
+
+        private void UpdateList()
+        {
+            productListBox.DataSource = null;
+            productListBox.Items.Clear();
+            List<Product> products = ProductDb.GetAllProducts();
+            productListBox.DataSource = products;
+            productListBox.DisplayMember = nameof(Product.ToString);
         }
     }
 }
