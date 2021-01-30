@@ -45,5 +45,19 @@ namespace LumberInventoryManager
                 return p;
             }
         }
+
+        public static void Delete(int id)
+        {
+            using (LumberContext context = new LumberContext())
+            {
+                Product prodToDelete =
+                    (from p in context.Products
+                     where p.ProductID == id
+                     select p).Single();
+
+                context.Entry(prodToDelete).State = EntityState.Deleted;
+                context.SaveChanges();
+            }
+        }
     }
 }
