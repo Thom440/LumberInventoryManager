@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,6 +33,16 @@ namespace LumberInventoryManager
                      select p).ToList();
 
                 return allProducts;
+            }
+        }
+
+        public static Product Update(Product p)
+        {
+            using (LumberContext context = new LumberContext())
+            {
+                context.Entry(p).State = EntityState.Modified;
+                context.SaveChanges();
+                return p;
             }
         }
     }
