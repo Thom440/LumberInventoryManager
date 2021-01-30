@@ -30,5 +30,11 @@ namespace LumberInventoryManager
             productListBox.DataSource = products;
             productListBox.DisplayMember = nameof(Product.ToString);
         }
+
+        private void UpdateBtn_Click(object sender, EventArgs e)
+        {
+            UpdateInventoryForm updateInventory = new UpdateInventoryForm();
+            DialogResult result = updateInventory.ShowDialog();
+        }
     }
 }
