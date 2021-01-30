@@ -32,11 +32,12 @@ namespace LumberInventoryManager
             this.addBtn = new System.Windows.Forms.Button();
             this.productListBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.updateBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // addBtn
             // 
-            this.addBtn.Location = new System.Drawing.Point(146, 167);
+            this.addBtn.Location = new System.Drawing.Point(12, 162);
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(120, 33);
             this.addBtn.TabIndex = 0;
@@ -47,7 +48,7 @@ namespace LumberInventoryManager
             // productListBox
             // 
             this.productListBox.FormattingEnabled = true;
-            this.productListBox.Location = new System.Drawing.Point(82, 45);
+            this.productListBox.Location = new System.Drawing.Point(12, 42);
             this.productListBox.Name = "productListBox";
             this.productListBox.Size = new System.Drawing.Size(251, 95);
             this.productListBox.TabIndex = 2;
@@ -55,17 +56,28 @@ namespace LumberInventoryManager
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(172, 9);
+            this.label1.Location = new System.Drawing.Point(97, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Inventory";
+            // 
+            // updateBtn
+            // 
+            this.updateBtn.Location = new System.Drawing.Point(153, 162);
+            this.updateBtn.Name = "updateBtn";
+            this.updateBtn.Size = new System.Drawing.Size(110, 32);
+            this.updateBtn.TabIndex = 4;
+            this.updateBtn.Text = "Update Inventory";
+            this.updateBtn.UseVisualStyleBackColor = true;
+            this.updateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(603, 455);
+            this.Controls.Add(this.updateBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.productListBox);
             this.Controls.Add(this.addBtn);
@@ -82,6 +94,7 @@ namespace LumberInventoryManager
         private System.Windows.Forms.Button addBtn;
         private System.Windows.Forms.ListBox productListBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button updateBtn;
     }
 }
 
