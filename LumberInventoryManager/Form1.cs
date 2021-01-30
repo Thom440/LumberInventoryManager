@@ -36,5 +36,11 @@ namespace LumberInventoryManager
             UpdateInventoryForm updateInventory = new UpdateInventoryForm();
             DialogResult result = updateInventory.ShowDialog();
         }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            Product product = (Product)productListBox.SelectedItem;
+            ProductDb.Delete(product.ProductID);
+        }
     }
 }
