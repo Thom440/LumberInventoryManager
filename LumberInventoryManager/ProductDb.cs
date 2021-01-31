@@ -30,6 +30,7 @@ namespace LumberInventoryManager
             {
                 List<Product> allProducts =
                     (from p in context.Products
+                     orderby p.Height, p.Width, p.Length
                      select p).ToList();
 
                 return allProducts;
