@@ -73,6 +73,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Invoice.cs" />
     <Compile Include="LumberContext.cs" />
     <Compile Include="Migrations\202101280001032_initial.cs" />
     <Compile Include="Migrations\202101280001032_initial.designer.cs">
