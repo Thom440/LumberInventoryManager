@@ -20,5 +20,7 @@ namespace LumberInventoryManager
 
         [Column(TypeName = "smalldatetime")]
         public DateTime ShipDate { get; set; }
+
+        public IList<InvoiceLineItems> InvoiceLineItems { get; set; }
     }
 }

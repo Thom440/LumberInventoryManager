@@ -74,14 +74,11 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Invoice.cs" />
+    <Compile Include="InvoiceLineItems.cs" />
     <Compile Include="LumberContext.cs" />
-    <Compile Include="Migrations\202101280001032_initial.cs" />
-    <Compile Include="Migrations\202101280001032_initial.designer.cs">
-      <DependentUpon>202101280001032_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202102042147278_CategoryTable.cs" />
-    <Compile Include="Migrations\202102042147278_CategoryTable.designer.cs">
-      <DependentUpon>202102042147278_CategoryTable.cs</DependentUpon>
+    <Compile Include="Migrations\202102042338591_Initial.cs" />
+    <Compile Include="Migrations\202102042338591_Initial.designer.cs">
+      <DependentUpon>202102042338591_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Product.cs" />
@@ -101,11 +98,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101280001032_initial.resx">
-      <DependentUpon>202101280001032_initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102042147278_CategoryTable.resx">
-      <DependentUpon>202102042147278_CategoryTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202102042338591_Initial.resx">
+      <DependentUpon>202102042338591_Initial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

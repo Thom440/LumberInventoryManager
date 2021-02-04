@@ -46,5 +46,7 @@ namespace LumberInventoryManager
         }
 
         public Category CategoryID { get; set; }
+
+        public IList<InvoiceLineItems> InvoiceLineItems { get; set; }
     }
 }

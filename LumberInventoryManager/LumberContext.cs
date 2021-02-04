@@ -22,6 +22,14 @@ namespace LumberInventoryManager
 
         // public virtual DbSet<MyEntity> MyEntities { get; set; }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<InvoiceLineItems>().HasKey(InvoiceLineItems => new { InvoiceLineItems.InvoiceID, InvoiceLineItems.ProductID });
+        }
+
         public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<Invoice> Invoices { get; set; }
+        public virtual DbSet<InvoiceLineItems> InvoiceLineItems { get; set; }
     } 
 }
