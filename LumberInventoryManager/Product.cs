@@ -44,5 +44,7 @@ namespace LumberInventoryManager
         {
             return Height + " x " + Width + " x " + Length + " In Stock " + OnHand + " Sold " + Sold;
         }
+
+        public Category CategoryID { get; set; }
     }
 }
