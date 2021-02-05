@@ -7,13 +7,13 @@ namespace LumberInventoryManager.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class initial : IMigrationMetadata
+    public sealed partial class Customer : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(initial));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Customer));
         
         string IMigrationMetadata.Id
         {
-            get { return "202101280001032_initial"; }
+            get { return "202102050011401_Customer"; }
         }
         
         string IMigrationMetadata.Source
