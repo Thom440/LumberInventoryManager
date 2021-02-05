@@ -37,7 +37,6 @@ namespace LumberInventoryManager
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.produceUnits = new System.Windows.Forms.TextBox();
-            this.deckingCheckBox = new System.Windows.Forms.CheckBox();
             this.consumeBtn = new System.Windows.Forms.Button();
             this.closeBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -49,6 +48,7 @@ namespace LumberInventoryManager
             this.consumeProductBox.Name = "consumeProductBox";
             this.consumeProductBox.Size = new System.Drawing.Size(236, 21);
             this.consumeProductBox.TabIndex = 0;
+            this.consumeProductBox.SelectedIndexChanged += new System.EventHandler(this.ConsumeProductBox_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -109,42 +109,34 @@ namespace LumberInventoryManager
             this.produceUnits.Size = new System.Drawing.Size(42, 20);
             this.produceUnits.TabIndex = 7;
             // 
-            // deckingCheckBox
-            // 
-            this.deckingCheckBox.AutoSize = true;
-            this.deckingCheckBox.Location = new System.Drawing.Point(12, 211);
-            this.deckingCheckBox.Name = "deckingCheckBox";
-            this.deckingCheckBox.Size = new System.Drawing.Size(72, 17);
-            this.deckingCheckBox.TabIndex = 9;
-            this.deckingCheckBox.Text = "Decking?";
-            this.deckingCheckBox.UseVisualStyleBackColor = true;
-            // 
             // consumeBtn
             // 
-            this.consumeBtn.Location = new System.Drawing.Point(12, 254);
+            this.consumeBtn.Location = new System.Drawing.Point(12, 216);
             this.consumeBtn.Name = "consumeBtn";
             this.consumeBtn.Size = new System.Drawing.Size(109, 36);
             this.consumeBtn.TabIndex = 10;
             this.consumeBtn.Text = "Consume Units";
             this.consumeBtn.UseVisualStyleBackColor = true;
+            this.consumeBtn.Click += new System.EventHandler(this.ConsumeBtn_Click);
             // 
             // closeBtn
             // 
-            this.closeBtn.Location = new System.Drawing.Point(132, 254);
+            this.closeBtn.Location = new System.Drawing.Point(132, 216);
             this.closeBtn.Name = "closeBtn";
             this.closeBtn.Size = new System.Drawing.Size(116, 36);
             this.closeBtn.TabIndex = 11;
             this.closeBtn.Text = "Close";
             this.closeBtn.UseVisualStyleBackColor = true;
+            this.closeBtn.Click += new System.EventHandler(this.CloseBtn_Click);
             // 
             // ConsumeUnitsForm
             // 
+            this.AcceptButton = this.consumeBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(279, 320);
+            this.ClientSize = new System.Drawing.Size(279, 271);
             this.Controls.Add(this.closeBtn);
             this.Controls.Add(this.consumeBtn);
-            this.Controls.Add(this.deckingCheckBox);
             this.Controls.Add(this.produceUnits);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -155,6 +147,7 @@ namespace LumberInventoryManager
             this.Controls.Add(this.consumeProductBox);
             this.Name = "ConsumeUnitsForm";
             this.Text = "Consume Units";
+            this.Load += new System.EventHandler(this.ConsumeUnitsForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,7 +163,6 @@ namespace LumberInventoryManager
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox produceUnits;
-        private System.Windows.Forms.CheckBox deckingCheckBox;
         private System.Windows.Forms.Button consumeBtn;
         private System.Windows.Forms.Button closeBtn;
     }

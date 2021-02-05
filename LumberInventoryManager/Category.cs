@@ -14,5 +14,10 @@ namespace LumberInventoryManager
 
         [Required]
         public string CategoryName { get; set; }
+
+        public override string ToString()
+        {
+            return CategoryName;
+        }
     }
 }
