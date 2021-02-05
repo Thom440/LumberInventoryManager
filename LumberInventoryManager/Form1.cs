@@ -27,8 +27,8 @@ namespace LumberInventoryManager
         private void Form1_Load(object sender, EventArgs e)
         {
             List<Product> products = ProductDb.GetAllProducts();
-            productListBox.DataSource = products;
-            productListBox.DisplayMember = nameof(Product.ToString);
+            IEnumerable<Product> distinctProducts = products.Distinct<Product>();
+            productListBox.DataSource = distinctProducts.ToList();
         }
 
         private void UpdateBtn_Click(object sender, EventArgs e)
@@ -50,8 +50,16 @@ namespace LumberInventoryManager
             productListBox.DataSource = null;
             productListBox.Items.Clear();
             List<Product> products = ProductDb.GetAllProducts();
-            productListBox.DataSource = products;
-            productListBox.DisplayMember = nameof(Product.ToString);
+            IEnumerable<Product> distinctProducts = products.Distinct<Product>();
+            productListBox.DataSource = distinctProducts.ToList();
+            productListBox.DisplayMember = nameof(Product);
+        }
+
+        private void ConsumeBtn_Click(object sender, EventArgs e)
+        {
+            ConsumeUnitsForm consumeUnits = new ConsumeUnitsForm();
+            consumeUnits.ShowDialog();
+            UpdateList();
         }
     }
 }

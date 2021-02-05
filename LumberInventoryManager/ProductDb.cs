@@ -60,5 +60,18 @@ namespace LumberInventoryManager
                 context.SaveChanges();
             }
         }
+
+        public static List<Product> GetProductsInRange(int height, int width, int length)
+        {
+            using (LumberContext context = new LumberContext())
+            {
+                List<Product> allProducts =
+                    (from p in context.Products
+                     where p.Height <= height && p.Width <= width && p.Length <= length
+                     orderby p.Height, p.Width, p.Length
+                     select p).ToList();
+                return allProducts;
+            }
+        }
     }
 }
