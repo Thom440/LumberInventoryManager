@@ -12,6 +12,7 @@ namespace LumberInventoryManager
         [Key]
         public int CategoryID { get; set; }
 
+        [Required]
         public string CategoryName { get; set; }
     }
 }

@@ -15,6 +15,7 @@ namespace LumberInventoryManager
         [Key]
         public int ProductID { get; set; }
 
+        [Required]
         public short Quantity { get; set; }
 
         public Invoice Invoice { get; set; }

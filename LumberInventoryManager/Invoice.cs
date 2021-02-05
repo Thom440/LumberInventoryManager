@@ -13,13 +13,15 @@ namespace LumberInventoryManager
         [Key]
         public int InvoiceID { get; set; }
 
+        [Required]
         public int InvoiceNumber { get; set; }
 
+        [Required]
         [Column(TypeName = "smalldatetime")]
         public DateTime InvoiceDate { get; set; }
 
         [Column(TypeName = "smalldatetime")]
-        public DateTime ShipDate { get; set; }
+        public DateTime? ShipDate { get; set; }
 
         public IList<InvoiceLineItems> InvoiceLineItems { get; set; }
     }
