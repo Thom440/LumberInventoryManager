@@ -67,6 +67,12 @@
       <DependentUpon>AddProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="Category.cs" />
+    <Compile Include="ConsumeUnitsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsumeUnitsForm.Designer.cs">
+      <DependentUpon>ConsumeUnitsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -99,6 +105,9 @@
     <Compile Include="Validator.cs" />
     <EmbeddedResource Include="AddProduct.resx">
       <DependentUpon>AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumeUnitsForm.resx">
+      <DependentUpon>ConsumeUnitsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
