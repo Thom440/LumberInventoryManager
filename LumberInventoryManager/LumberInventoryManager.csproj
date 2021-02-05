@@ -67,6 +67,7 @@
       <DependentUpon>AddProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="Category.cs" />
+    <Compile Include="Customer.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +80,10 @@
     <Compile Include="Migrations\202102042338591_Initial.cs" />
     <Compile Include="Migrations\202102042338591_Initial.designer.cs">
       <DependentUpon>202102042338591_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102050011401_Customer.cs" />
+    <Compile Include="Migrations\202102050011401_Customer.designer.cs">
+      <DependentUpon>202102050011401_Customer.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Product.cs" />
@@ -100,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202102042338591_Initial.resx">
       <DependentUpon>202102042338591_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102050011401_Customer.resx">
+      <DependentUpon>202102050011401_Customer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

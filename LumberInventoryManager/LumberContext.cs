@@ -31,5 +31,6 @@ namespace LumberInventoryManager
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Invoice> Invoices { get; set; }
         public virtual DbSet<InvoiceLineItems> InvoiceLineItems { get; set; }
+        public virtual DbSet<Customer> Customers { get; set; }
     } 
 }
