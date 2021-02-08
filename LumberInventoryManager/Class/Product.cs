@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace LumberInventoryManager
 {
+    /// <summary>
+    /// Represents individual unit of lumber.
+    /// </summary>
     public class Product
     {
         [Key]
