@@ -64,9 +64,18 @@ namespace LumberInventoryManager
 
         private void ConsumeBtn_Click(object sender, EventArgs e)
         {
-            ConsumeUnitsForm consumeUnits = new ConsumeUnitsForm();
-            consumeUnits.ShowDialog();
-            UpdateList();
+            List<Product> product = ProductDb.GetAllProducts();
+            if (product.Any())
+            {
+                ConsumeUnitsForm consumeUnits = new ConsumeUnitsForm();
+                consumeUnits.ShowDialog();
+                UpdateList();
+            }
+            else
+            {
+                MessageBox.Show("There are no products in the database", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
     }
 }
