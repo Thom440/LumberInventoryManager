@@ -39,10 +39,17 @@ namespace LumberInventoryManager
         }
 
         private void DeleteBtn_Click(object sender, EventArgs e)
-        {
+        {   
             Product product = (Product)productListBox.SelectedItem;
-            ProductDb.Delete(product.ProductID);
-            UpdateList();
+            if (product != null)
+            {
+                ProductDb.Delete(product.ProductID);
+                UpdateList();
+            }
+            else
+            {
+                MessageBox.Show("There are no products to delete", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void UpdateList()
