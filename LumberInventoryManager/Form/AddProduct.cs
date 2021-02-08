@@ -28,9 +28,17 @@ namespace LumberInventoryManager
                     Width = Convert.ToByte(widthTxtBox.Text),
                     Length = Convert.ToByte(lengthTxtBox.Text)
                 };
-
-                ProductDb.Add(product);
-                ClearTxtBox();
+                try
+                {
+                    ProductDb.Add(product);
+                    ClearTxtBox();
+                    messageLbl.Text = $"{ product.Height} x {product.Width} x {product.Length} added successfully"; 
+                }
+                catch
+                {
+                    messageLbl.Text = "Failed to add Product";
+                }
+                
             }
             else
             {

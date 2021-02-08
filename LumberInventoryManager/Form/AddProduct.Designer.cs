@@ -37,6 +37,7 @@ namespace LumberInventoryManager
             this.lengthTxtBox = new System.Windows.Forms.TextBox();
             this.addBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
+            this.messageLbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -110,11 +111,21 @@ namespace LumberInventoryManager
             this.cancelBtn.UseVisualStyleBackColor = true;
             this.cancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
             // 
+            // messageLbl
+            // 
+            this.messageLbl.AutoSize = true;
+            this.messageLbl.Location = new System.Drawing.Point(1, 139);
+            this.messageLbl.Name = "messageLbl";
+            this.messageLbl.Size = new System.Drawing.Size(0, 13);
+            this.messageLbl.TabIndex = 8;
+            // 
             // AddProduct
             // 
+            this.AcceptButton = this.addBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(204, 149);
+            this.ClientSize = new System.Drawing.Size(204, 176);
+            this.Controls.Add(this.messageLbl);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.addBtn);
             this.Controls.Add(this.lengthTxtBox);
@@ -140,5 +151,6 @@ namespace LumberInventoryManager
         private System.Windows.Forms.TextBox lengthTxtBox;
         private System.Windows.Forms.Button addBtn;
         private System.Windows.Forms.Button cancelBtn;
+        private System.Windows.Forms.Label messageLbl;
     }
 }
