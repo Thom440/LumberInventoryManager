@@ -15,6 +15,9 @@ namespace LumberInventoryManager
         [Key]
         public int ProductID { get; set; }
 
+        /// <summary>
+        /// The number of products that is displayed.
+        /// </summary>
         [Required]
         public short Quantity { get; set; }
 

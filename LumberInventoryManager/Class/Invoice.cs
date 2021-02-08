@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace LumberInventoryManager
 {
+    /// <summary>
+    /// Represents the order.
+    /// </summary>
     public class Invoice
     {
         [Key]
@@ -16,10 +19,16 @@ namespace LumberInventoryManager
         [Required]
         public int InvoiceNumber { get; set; }
 
+        /// <summary>
+        /// The date the order was placed.
+        /// </summary>
         [Required]
         [Column(TypeName = "smalldatetime")]
         public DateTime InvoiceDate { get; set; }
 
+        /// <summary>
+        /// The date the order has shipped. (nullable)
+        /// </summary>
         [Column(TypeName = "smalldatetime")]
         public DateTime? ShipDate { get; set; }
 

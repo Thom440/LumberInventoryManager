@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace LumberInventoryManager
 {
+    /// <summary>
+    /// The Product Database.
+    /// </summary>
     static class ProductDb
     {
         /// <summary>
@@ -24,6 +27,10 @@ namespace LumberInventoryManager
             }
         }
 
+        /// <summary>
+        /// Selects all products from the product table.
+        /// </summary>
+        /// <returns></returns>
         public static List<Product> GetAllProducts()
         {
             using(LumberContext context = new LumberContext())
@@ -37,6 +44,10 @@ namespace LumberInventoryManager
             }
         }
 
+        /// <summary>
+        /// Updates an individual unit of lumber.
+        /// </summary>
+        /// <param name="p">The product.</param>
         public static Product Update(Product p)
         {
             using (LumberContext context = new LumberContext())
@@ -47,6 +58,10 @@ namespace LumberInventoryManager
             }
         }
 
+        /// <summary>
+        /// Deletes a unit of lumber.
+        /// </summary>
+        /// <param name="id">id of the product.</param>
         public static void Delete(int id)
         {
             using (LumberContext context = new LumberContext())
@@ -61,6 +76,12 @@ namespace LumberInventoryManager
             }
         }
 
+        /// <summary>
+        /// Grabs all products that are <= to the current product. 
+        /// </summary>
+        /// <param name="height">Height of the board</param>
+        /// <param name="width">Width of the board</param>
+        /// <param name="length">Length of the board</param>
         public static List<Product> GetProductsInRange(int height, int width, int length)
         {
             using (LumberContext context = new LumberContext())

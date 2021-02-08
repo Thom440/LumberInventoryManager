@@ -7,8 +7,16 @@ using System.Windows.Forms;
 
 namespace LumberInventoryManager
 {
+    /// <summary>
+    /// Validates input.
+    /// </summary>
     public static class Validator
     {
+        /// <summary>
+        /// Checks if input is able to be converted to a byte.
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public static bool IsByte(string input)
         {
             try
@@ -22,6 +30,11 @@ namespace LumberInventoryManager
             }
         }
 
+        /// <summary>
+        /// Checks for empty textboxes.
+        /// </summary>
+        /// <param name="box"></param>
+        /// <returns></returns>
         public static bool IsPresent(TextBox box)
         {
             if (string.IsNullOrWhiteSpace(box.Text))
@@ -31,6 +44,11 @@ namespace LumberInventoryManager
             return true;
         }
 
+        /// <summary>
+        /// Checks if input is able to be converted to a short.
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public static bool IsShort(string input)
         {
             try
