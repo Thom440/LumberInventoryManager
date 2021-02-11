@@ -26,7 +26,7 @@ namespace LumberInventoryManager
         private void ConsumeProductBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             Product product = (Product)consumeProductBox.SelectedItem;
-            List<Product> products = ProductDb.GetProductsInRange(product.Height, product.Width, product.Length);
+            List<Product> products = ProductDb.GetProductsInRange(product.ProductID, product.Height, product.Width, product.Length);
             produceProductBox.DataSource = products.ToList();
         }
 
