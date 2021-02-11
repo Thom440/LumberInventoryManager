@@ -58,5 +58,75 @@ namespace LumberInventoryManager
         {
             Close();
         }
+
+        private void wwCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (wwCheckBox.Checked)
+            {
+                twoFiveCheckBox.Enabled = false;
+                fourOCheckBox.Enabled = false;
+                sixOCheckBox.Enabled = false;
+                ccaCheckBox.Enabled = false;
+                acqCheckBox.Enabled = false;
+            }
+            else
+            {
+                twoFiveCheckBox.Enabled = true;
+                fourOCheckBox.Enabled = true;
+                sixOCheckBox.Enabled = true;
+                ccaCheckBox.Enabled = true;
+                acqCheckBox.Enabled = true;
+            }
+        }
+
+        private void twoFiveCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (twoFiveCheckBox.Checked)
+            {
+                wwCheckBox.Enabled = false;
+                fourOCheckBox.Checked = false;
+                sixOCheckBox.Checked = false;
+            }
+        }
+
+        private void fourOCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (fourOCheckBox.Checked)
+            {
+                wwCheckBox.Enabled = false;
+                twoFiveCheckBox.Checked = false;
+                sixOCheckBox.Checked = false;
+            }
+            
+        }
+
+        private void sixOCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (sixOCheckBox.Checked)
+            {
+                wwCheckBox.Enabled = false;
+                twoFiveCheckBox.Checked = false;
+                fourOCheckBox.Checked = false;
+            }
+            
+        }
+
+        private void acqCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (acqCheckBox.Checked)
+            {
+                wwCheckBox.Enabled = false;
+                ccaCheckBox.Checked = false;
+            }
+        }
+
+        private void ccaCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ccaCheckBox.Checked)
+            {
+                wwCheckBox.Enabled = false;
+                acqCheckBox.Checked = false;
+            }
+        }
     }
 }
