@@ -25,5 +25,7 @@ namespace LumberInventoryManager
         {
             return CategoryName;
         }
+
+        public List<Product> Products { get; set; }
     }
 }
