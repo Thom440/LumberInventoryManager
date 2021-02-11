@@ -45,7 +45,7 @@ namespace LumberInventoryManager
 
         public override string ToString()
         {
-            return Height + " x " + Width + " x " + Length + " In Stock " + OnHand + " Sold " + Sold + " " + Category;
+            return Height + " x " + Width + " x " + Length + " In Stock " + OnHand + " Sold " + Sold + " " + String.Join(" ", Category);
         }
 
         public List<Category> Category { get; set; }
