@@ -38,7 +38,7 @@ namespace LumberInventoryManager
                 List<Product> allProducts =
                     (from p in context.Products
                      orderby p.Height, p.Width, p.Length
-                     select p).Include(nameof(Product.CategoryID)).ToList();
+                     select p).Include(nameof(Product.Category)).ToList();
 
                 return allProducts;
             }
