@@ -68,7 +68,6 @@ namespace LumberInventoryManager
                 else
                 {
                     MessageBox.Show("Appropriate boxes must be checked", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
                 } 
             }
             else

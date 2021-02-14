@@ -94,7 +94,7 @@ namespace LumberInventoryManager
                 return allProducts;
             }
         }
-
+      
         /// <summary>
         /// Grabs a single category
         /// </summary>
