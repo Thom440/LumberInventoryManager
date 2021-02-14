@@ -94,5 +94,18 @@ namespace LumberInventoryManager
                 return allProducts;
             }
         }
+
+        public static List<Category> GetCategory(int id)
+        {
+            using (LumberContext context = new LumberContext())
+            {
+                List<Category> category =
+                    (from c in context.Categories
+                     where c.CategoryID == id
+                     select c).ToList();
+
+                return category;
+            }
+        }
     }
 }
