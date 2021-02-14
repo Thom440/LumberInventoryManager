@@ -12,6 +12,12 @@ namespace LumberInventoryManager
 {
     public partial class AddProduct : Form
     {
+        private const int WhiteWood = 1;
+        private const int TwoFive = 2;
+        private const int FourO = 3;
+        private const int SixO = 4;
+        private const int Acq = 5;
+        private const int Cca = 6;
         public AddProduct()
         {
             InitializeComponent();
@@ -39,29 +45,29 @@ namespace LumberInventoryManager
                     int treatmentType;
                     if (twoFiveCheckBox.Checked)
                     {
-                        treatmentLevel = 2;
+                        treatmentLevel = TwoFive;
                     }
                     else if (fourOCheckBox.Checked)
                     {
-                        treatmentLevel = 3;
+                        treatmentLevel = FourO;
                     }
                     else
                     {
-                        treatmentLevel = 4;
+                        treatmentLevel = SixO;
                     }
                     if (acqCheckBox.Checked)
                     {
-                        treatmentType = 5;
+                        treatmentType = Acq;
                     }
                     else
                     {
-                        treatmentType = 6;
+                        treatmentType = Cca;
                     }
                     AddProductToDatabase(product, treatmentLevel, treatmentType);
                 }
                 else
                 {
-                    return;
+                    MessageBox.Show("Appropriate boxes must be checked", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 } 
             }
             else
@@ -75,12 +81,10 @@ namespace LumberInventoryManager
         {
             try
             {
-
-                //List<Category> category = ProductDb.GetCategory(1);
-                product.Category = ProductDb.GetCategory(1);
+                product.Category.Add(ProductDb.GetCategory(WhiteWood));
                 ProductDb.Add(product);
-                ClearTxtBox();
-                messageLbl.Text = $"{ product.Height} x {product.Width} x {product.Length} added successfully";
+                ClearTxtBoxesAndCheckBoxes();
+                messageLbl.Text = $"{product.Height} x {product.Width} x {product.Length} added successfully";
             }
             catch
             {
@@ -90,14 +94,30 @@ namespace LumberInventoryManager
 
         private void AddProductToDatabase(Product p, int treatmentLevel, int treatmentType)
         {
-
+            p.Category.Add(ProductDb.GetCategory(treatmentLevel));
+            p.Category.Add(ProductDb.GetCategory(treatmentType));
+            ProductDb.Add(p);
+            ClearTxtBoxesAndCheckBoxes();
+            messageLbl.Text = $"{p.Height} x {p.Width} x {p.Length} added successfully";
         }
 
-        private void ClearTxtBox()
+        private void ClearTxtBoxesAndCheckBoxes()
         {
             heightTxtBox.Text = "";
             widthTxtBox.Text = "";
             lengthTxtBox.Text = "";
+            wwCheckBox.Checked = false;
+            twoFiveCheckBox.Checked = false;
+            fourOCheckBox.Checked = false;
+            sixOCheckBox.Checked = false;
+            acqCheckBox.Checked = false;
+            ccaCheckBox.Checked = false;
+            wwCheckBox.Enabled = true;
+            twoFiveCheckBox.Enabled = true;
+            fourOCheckBox.Enabled = true;
+            sixOCheckBox.Enabled = true;
+            acqCheckBox.Enabled = true;
+            ccaCheckBox.Enabled = true;
         }
 
         private void CancelBtn_Click(object sender, EventArgs e)
@@ -105,7 +125,7 @@ namespace LumberInventoryManager
             Close();
         }
 
-        private void wwCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void WwCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (wwCheckBox.Checked)
             {
@@ -125,7 +145,7 @@ namespace LumberInventoryManager
             }
         }
 
-        private void twoFiveCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void TwoFiveCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (twoFiveCheckBox.Checked)
             {
@@ -139,7 +159,7 @@ namespace LumberInventoryManager
             }
         }
 
-        private void fourOCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void FourOCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (fourOCheckBox.Checked)
             {
@@ -153,7 +173,7 @@ namespace LumberInventoryManager
             }
         }
 
-        private void sixOCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void SixOCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (sixOCheckBox.Checked)
             {
@@ -167,7 +187,7 @@ namespace LumberInventoryManager
             }
         }
 
-        private void acqCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void AcqCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (acqCheckBox.Checked)
             {
@@ -180,7 +200,7 @@ namespace LumberInventoryManager
             }
         }
 
-        private void ccaCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void CcaCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (ccaCheckBox.Checked)
             {

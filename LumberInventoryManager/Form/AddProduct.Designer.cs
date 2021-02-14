@@ -134,7 +134,7 @@ namespace LumberInventoryManager
             this.wwCheckBox.TabIndex = 9;
             this.wwCheckBox.Text = "White Wood";
             this.wwCheckBox.UseVisualStyleBackColor = true;
-            this.wwCheckBox.CheckedChanged += new System.EventHandler(this.wwCheckBox_CheckedChanged);
+            this.wwCheckBox.CheckedChanged += new System.EventHandler(this.WwCheckBox_CheckedChanged);
             // 
             // twoFiveCheckBox
             // 
@@ -145,7 +145,7 @@ namespace LumberInventoryManager
             this.twoFiveCheckBox.TabIndex = 10;
             this.twoFiveCheckBox.Text = ".25";
             this.twoFiveCheckBox.UseVisualStyleBackColor = true;
-            this.twoFiveCheckBox.CheckedChanged += new System.EventHandler(this.twoFiveCheckBox_CheckedChanged);
+            this.twoFiveCheckBox.CheckedChanged += new System.EventHandler(this.TwoFiveCheckBox_CheckedChanged);
             // 
             // fourOCheckBox
             // 
@@ -156,7 +156,7 @@ namespace LumberInventoryManager
             this.fourOCheckBox.TabIndex = 11;
             this.fourOCheckBox.Text = ".40";
             this.fourOCheckBox.UseVisualStyleBackColor = true;
-            this.fourOCheckBox.CheckedChanged += new System.EventHandler(this.fourOCheckBox_CheckedChanged);
+            this.fourOCheckBox.CheckedChanged += new System.EventHandler(this.FourOCheckBox_CheckedChanged);
             // 
             // sixOCheckBox
             // 
@@ -167,7 +167,7 @@ namespace LumberInventoryManager
             this.sixOCheckBox.TabIndex = 12;
             this.sixOCheckBox.Text = ".60";
             this.sixOCheckBox.UseVisualStyleBackColor = true;
-            this.sixOCheckBox.CheckedChanged += new System.EventHandler(this.sixOCheckBox_CheckedChanged);
+            this.sixOCheckBox.CheckedChanged += new System.EventHandler(this.SixOCheckBox_CheckedChanged);
             // 
             // acqCheckBox
             // 
@@ -178,7 +178,7 @@ namespace LumberInventoryManager
             this.acqCheckBox.TabIndex = 13;
             this.acqCheckBox.Text = "ACQ";
             this.acqCheckBox.UseVisualStyleBackColor = true;
-            this.acqCheckBox.CheckedChanged += new System.EventHandler(this.acqCheckBox_CheckedChanged);
+            this.acqCheckBox.CheckedChanged += new System.EventHandler(this.AcqCheckBox_CheckedChanged);
             // 
             // ccaCheckBox
             // 
@@ -189,7 +189,7 @@ namespace LumberInventoryManager
             this.ccaCheckBox.TabIndex = 14;
             this.ccaCheckBox.Text = "CCA";
             this.ccaCheckBox.UseVisualStyleBackColor = true;
-            this.ccaCheckBox.CheckedChanged += new System.EventHandler(this.ccaCheckBox_CheckedChanged);
+            this.ccaCheckBox.CheckedChanged += new System.EventHandler(this.CcaCheckBox_CheckedChanged);
             // 
             // AddProduct
             // 
