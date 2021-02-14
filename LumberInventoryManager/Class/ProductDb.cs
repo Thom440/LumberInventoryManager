@@ -95,14 +95,19 @@ namespace LumberInventoryManager
             }
         }
 
-        public static List<Category> GetCategory(int id)
+        /// <summary>
+        /// Grabs a single category
+        /// </summary>
+        /// <param name="id">The Id for the category</param>
+        /// <returns></returns>
+        public static Category GetCategory(int id)
         {
             using (LumberContext context = new LumberContext())
             {
-                List<Category> category =
+                Category category =
                     (from c in context.Categories
                      where c.CategoryID == id
-                     select c).ToList();
+                     select c).Single();
 
                 return category;
             }
