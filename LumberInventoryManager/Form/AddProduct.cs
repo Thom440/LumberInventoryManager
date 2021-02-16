@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -68,6 +69,7 @@ namespace LumberInventoryManager
                 else
                 {
                     MessageBox.Show("Appropriate boxes must be checked", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
                 } 
             }
             else
@@ -86,7 +88,7 @@ namespace LumberInventoryManager
                 ClearTxtBoxesAndCheckBoxes();
                 messageLbl.Text = $"{product.Height} x {product.Width} x {product.Length} added successfully";
             }
-            catch
+            catch (SqlException)
             {
                 messageLbl.Text = "Failed to add Product";
             }
@@ -94,11 +96,18 @@ namespace LumberInventoryManager
 
         private void AddProductToDatabase(Product p, int treatmentLevel, int treatmentType)
         {
-            p.Category.Add(ProductDb.GetCategory(treatmentLevel));
-            p.Category.Add(ProductDb.GetCategory(treatmentType));
-            ProductDb.Add(p);
-            ClearTxtBoxesAndCheckBoxes();
-            messageLbl.Text = $"{p.Height} x {p.Width} x {p.Length} added successfully";
+            try
+            {
+                p.Category.Add(ProductDb.GetCategory(treatmentLevel));
+                p.Category.Add(ProductDb.GetCategory(treatmentType));
+                ProductDb.Add(p);
+                ClearTxtBoxesAndCheckBoxes();
+                messageLbl.Text = $"{p.Height} x {p.Width} x {p.Length} added successfully";
+            }
+            catch (SqlException)
+            {
+                messageLbl.Text = "Failed to add Product";
+            }
         }
 
         private void ClearTxtBoxesAndCheckBoxes()

@@ -22,6 +22,10 @@ namespace LumberInventoryManager
             using (LumberContext context = new LumberContext())
             {
                 context.Products.Add(p);
+                for (int i = 0; i < p.Category.Count; i++)
+                {
+                    context.Categories.Attach(p.Category[i]);
+                }
                 context.SaveChanges();
                 return p;
             }
