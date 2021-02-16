@@ -3,12 +3,12 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class OneToMany : DbMigration
+    public partial class ManyToMany : DbMigration
     {
         public override void Up()
         {
-            DropForeignKey("dbo.Categories", "Product_ProductID", "dbo.Products");
-            DropIndex("dbo.Categories", new[] { "Product_ProductID" });
+            DropForeignKey("dbo.Products", "CategoryID_CategoryID", "dbo.Categories");
+            DropIndex("dbo.Products", new[] { "CategoryID_CategoryID" });
             CreateTable(
                 "dbo.ProductCategories",
                 c => new
@@ -22,19 +22,19 @@
                 .Index(t => t.Product_ProductID)
                 .Index(t => t.Category_CategoryID);
             
-            DropColumn("dbo.Categories", "Product_ProductID");
+            DropColumn("dbo.Products", "CategoryID_CategoryID");
         }
         
         public override void Down()
         {
-            AddColumn("dbo.Categories", "Product_ProductID", c => c.Int());
+            AddColumn("dbo.Products", "CategoryID_CategoryID", c => c.Int());
             DropForeignKey("dbo.ProductCategories", "Category_CategoryID", "dbo.Categories");
             DropForeignKey("dbo.ProductCategories", "Product_ProductID", "dbo.Products");
             DropIndex("dbo.ProductCategories", new[] { "Category_CategoryID" });
             DropIndex("dbo.ProductCategories", new[] { "Product_ProductID" });
             DropTable("dbo.ProductCategories");
-            CreateIndex("dbo.Categories", "Product_ProductID");
-            AddForeignKey("dbo.Categories", "Product_ProductID", "dbo.Products", "ProductID");
+            CreateIndex("dbo.Products", "CategoryID_CategoryID");
+            AddForeignKey("dbo.Products", "CategoryID_CategoryID", "dbo.Categories", "CategoryID");
         }
     }
 }

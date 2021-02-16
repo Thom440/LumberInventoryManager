@@ -7,13 +7,13 @@ namespace LumberInventoryManager.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class OneToMany : IMigrationMetadata
+    public sealed partial class ManyToMany : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(OneToMany));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(ManyToMany));
         
         string IMigrationMetadata.Id
         {
-            get { return "202102111836557_OneToMany"; }
+            get { return "202102152232093_ManyToMany"; }
         }
         
         string IMigrationMetadata.Source
