@@ -45,7 +45,7 @@ namespace LumberInventoryManager
         public string State { get; set; }
 
         [Required]
-        public Int16 ZipCode { get; set; }
+        public Int32 ZipCode { get; set; }
 
         public List<Invoice> Invoices { get; set; } = new List<Invoice>();
     }

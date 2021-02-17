@@ -61,5 +61,19 @@ namespace LumberInventoryManager
                 return false;
             }
         }
+
+        public static bool IsInt(string input)
+        {
+            try
+            {
+                Convert.ToInt32(input);
+                return true;
+            }
+            catch
+            {
+
+                return false;
+            }
+        }
     }
 }

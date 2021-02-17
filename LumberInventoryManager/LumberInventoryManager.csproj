@@ -105,9 +105,9 @@
     <Compile Include="Migrations\202102152232093_ManyToMany.designer.cs">
       <DependentUpon>202102152232093_ManyToMany.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202102170400276_ManyToManyInvoiceCustomer.cs" />
-    <Compile Include="Migrations\202102170400276_ManyToManyInvoiceCustomer.designer.cs">
-      <DependentUpon>202102170400276_ManyToManyInvoiceCustomer.cs</DependentUpon>
+    <Compile Include="Migrations\202102170501593_ManyToManyInvoices.cs" />
+    <Compile Include="Migrations\202102170501593_ManyToManyInvoices.designer.cs">
+      <DependentUpon>202102170501593_ManyToManyInvoices.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Class\Product.cs" />
@@ -145,8 +145,8 @@
     <EmbeddedResource Include="Migrations\202102152232093_ManyToMany.resx">
       <DependentUpon>202102152232093_ManyToMany.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102170400276_ManyToManyInvoiceCustomer.resx">
-      <DependentUpon>202102170400276_ManyToManyInvoiceCustomer.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202102170501593_ManyToManyInvoices.resx">
+      <DependentUpon>202102170501593_ManyToManyInvoices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

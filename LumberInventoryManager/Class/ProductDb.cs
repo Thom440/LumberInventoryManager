@@ -120,5 +120,15 @@ namespace LumberInventoryManager
                 return category;
             }
         }
+
+        public static Customer AddCustomer(Customer c)
+        {
+            using (LumberContext context = new LumberContext())
+            {
+                context.Customers.Add(c);
+                context.SaveChanges();
+                return c;
+            }
+        }
     }
 }

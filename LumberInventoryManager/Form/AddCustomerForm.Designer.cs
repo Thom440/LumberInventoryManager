@@ -41,10 +41,11 @@ namespace LumberInventoryManager
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.addCustomerBtn = new System.Windows.Forms.Button();
+            this.cancelBtn = new System.Windows.Forms.Button();
             this.businessTxtBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.messageLbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // firstNameTxtBox
@@ -145,24 +146,25 @@ namespace LumberInventoryManager
             this.label6.TabIndex = 11;
             this.label6.Text = "Zip Code:";
             // 
-            // button1
+            // addCustomerBtn
             // 
-            this.button1.Location = new System.Drawing.Point(232, 200);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 28);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Add Customer";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.addCustomerBtn.Location = new System.Drawing.Point(232, 200);
+            this.addCustomerBtn.Name = "addCustomerBtn";
+            this.addCustomerBtn.Size = new System.Drawing.Size(88, 28);
+            this.addCustomerBtn.TabIndex = 12;
+            this.addCustomerBtn.Text = "Add Customer";
+            this.addCustomerBtn.UseVisualStyleBackColor = true;
+            this.addCustomerBtn.Click += new System.EventHandler(this.AddCustomerBtn_Click);
             // 
-            // button2
+            // cancelBtn
             // 
-            this.button2.Location = new System.Drawing.Point(232, 256);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 28);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
+            this.cancelBtn.Location = new System.Drawing.Point(232, 256);
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.Size = new System.Drawing.Size(88, 28);
+            this.cancelBtn.TabIndex = 13;
+            this.cancelBtn.Text = "Cancel";
+            this.cancelBtn.UseVisualStyleBackColor = true;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // businessTxtBox
             // 
@@ -180,15 +182,25 @@ namespace LumberInventoryManager
             this.label7.TabIndex = 15;
             this.label7.Text = "Business:";
             // 
+            // messageLbl
+            // 
+            this.messageLbl.AutoSize = true;
+            this.messageLbl.Location = new System.Drawing.Point(41, 306);
+            this.messageLbl.Name = "messageLbl";
+            this.messageLbl.Size = new System.Drawing.Size(0, 13);
+            this.messageLbl.TabIndex = 16;
+            // 
             // AddCustomerForm
             // 
+            this.AcceptButton = this.addCustomerBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 304);
+            this.ClientSize = new System.Drawing.Size(452, 328);
+            this.Controls.Add(this.messageLbl);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.businessTxtBox);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cancelBtn);
+            this.Controls.Add(this.addCustomerBtn);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -222,9 +234,10 @@ namespace LumberInventoryManager
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button addCustomerBtn;
+        private System.Windows.Forms.Button cancelBtn;
         private System.Windows.Forms.TextBox businessTxtBox;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label messageLbl;
     }
 }

@@ -77,5 +77,11 @@ namespace LumberInventoryManager
             }
             
         }
+
+        private void addCustomerBtn_Click(object sender, EventArgs e)
+        {
+            AddCustomerForm addCustomerForm = new AddCustomerForm();
+            addCustomerForm.ShowDialog();
+        }
     }
 }

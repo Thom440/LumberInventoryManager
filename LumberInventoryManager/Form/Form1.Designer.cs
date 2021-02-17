@@ -35,6 +35,7 @@ namespace LumberInventoryManager
             this.updateBtn = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
             this.consumeBtn = new System.Windows.Forms.Button();
+            this.addCustomerBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // addBtn
@@ -94,11 +95,22 @@ namespace LumberInventoryManager
             this.consumeBtn.UseVisualStyleBackColor = true;
             this.consumeBtn.Click += new System.EventHandler(this.ConsumeBtn_Click);
             // 
+            // addCustomerBtn
+            // 
+            this.addCustomerBtn.Location = new System.Drawing.Point(13, 243);
+            this.addCustomerBtn.Name = "addCustomerBtn";
+            this.addCustomerBtn.Size = new System.Drawing.Size(119, 33);
+            this.addCustomerBtn.TabIndex = 7;
+            this.addCustomerBtn.Text = "Add Customer";
+            this.addCustomerBtn.UseVisualStyleBackColor = true;
+            this.addCustomerBtn.Click += new System.EventHandler(this.addCustomerBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(603, 455);
+            this.Controls.Add(this.addCustomerBtn);
             this.Controls.Add(this.consumeBtn);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.updateBtn);
@@ -121,6 +133,7 @@ namespace LumberInventoryManager
         private System.Windows.Forms.Button updateBtn;
         private System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.Button consumeBtn;
+        private System.Windows.Forms.Button addCustomerBtn;
     }
 }
 
