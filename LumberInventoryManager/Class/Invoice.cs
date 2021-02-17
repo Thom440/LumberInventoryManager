@@ -33,5 +33,7 @@ namespace LumberInventoryManager
         public DateTime? ShipDate { get; set; }
 
         public IList<InvoiceLineItems> InvoiceLineItems { get; set; }
+
+        public List<Customer> Customers { get; set; } = new List<Customer>();
     }
 }
