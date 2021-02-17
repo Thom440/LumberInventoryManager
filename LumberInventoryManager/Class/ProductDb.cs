@@ -41,8 +41,12 @@ namespace LumberInventoryManager
             {
                 List<Product> allProducts =
                     (from p in context.Products
-                     orderby p.Height, p.Width, p.Length
                      select p).Include(nameof(Product.Category)).ToList();
+
+                allProducts = allProducts.OrderBy(p => p.Height)
+                    .ThenBy(p => p.Width)
+                    .ThenBy(p => p.Length)
+                    .ThenBy(p => p.Category[0].CategoryName).ToList();
 
                 return allProducts;
             }
