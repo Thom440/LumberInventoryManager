@@ -104,7 +104,7 @@ namespace LumberInventoryManager
             this.addCustomerBtn.TabIndex = 7;
             this.addCustomerBtn.Text = "Add Customer";
             this.addCustomerBtn.UseVisualStyleBackColor = true;
-            this.addCustomerBtn.Click += new System.EventHandler(this.addCustomerBtn_Click);
+            this.addCustomerBtn.Click += new System.EventHandler(this.AddCustomerBtn_Click);
             // 
             // createInvoiceBtn
             // 
