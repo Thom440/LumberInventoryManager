@@ -16,13 +16,9 @@ namespace LumberInventoryManager
         [Key]
         public int InvoiceID { get; set; }
 
-        [Required]
-        public int InvoiceNumber { get; set; }
-
         /// <summary>
         /// The date the order was placed.
         /// </summary>
-        [Required]
         [Column(TypeName = "smalldatetime")]
         public DateTime InvoiceDate { get; set; }
 
@@ -35,5 +31,10 @@ namespace LumberInventoryManager
         public IList<InvoiceLineItems> InvoiceLineItems { get; set; }
 
         public List<Customer> Customers { get; set; } = new List<Customer>();
+
+        public Invoice()
+        {
+            this.InvoiceDate = DateTime.Now;
+        }
     }
 }

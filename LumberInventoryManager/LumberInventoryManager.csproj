@@ -60,6 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form\CreateInvoiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\CreateInvoiceForm.Designer.cs">
+      <DependentUpon>CreateInvoiceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\AddCustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,10 @@
     <Compile Include="Migrations\202102170501593_ManyToManyInvoices.designer.cs">
       <DependentUpon>202102170501593_ManyToManyInvoices.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202102182130207_Invoice.cs" />
+    <Compile Include="Migrations\202102182130207_Invoice.designer.cs">
+      <DependentUpon>202102182130207_Invoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Class\Product.cs" />
     <Compile Include="Class\ProductDb.cs" />
@@ -130,6 +140,9 @@
     <EmbeddedResource Include="Form\ConsumeUnitsForm.resx">
       <DependentUpon>ConsumeUnitsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\CreateInvoiceForm.resx">
+      <DependentUpon>CreateInvoiceForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202102170501593_ManyToManyInvoices.resx">
       <DependentUpon>202102170501593_ManyToManyInvoices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102182130207_Invoice.resx">
+      <DependentUpon>202102182130207_Invoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
