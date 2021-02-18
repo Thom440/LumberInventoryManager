@@ -83,5 +83,11 @@ namespace LumberInventoryManager
             AddCustomerForm addCustomerForm = new AddCustomerForm();
             addCustomerForm.ShowDialog();
         }
+
+        private void CreateInvoiceBtn_Click(object sender, EventArgs e)
+        {
+            CreateInvoiceForm createInvoice = new CreateInvoiceForm();
+            createInvoice.ShowDialog();
+        }
     }
 }

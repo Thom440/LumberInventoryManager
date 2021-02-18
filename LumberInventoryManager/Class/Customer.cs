@@ -48,5 +48,10 @@ namespace LumberInventoryManager
         public Int32 ZipCode { get; set; }
 
         public List<Invoice> Invoices { get; set; } = new List<Invoice>();
+
+        public override string ToString()
+        {
+            return $"{Business} {ContactFirstName} {ContactLastName}";
+        }
     }
 }

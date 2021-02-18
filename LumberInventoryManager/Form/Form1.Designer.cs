@@ -36,6 +36,7 @@ namespace LumberInventoryManager
             this.deleteBtn = new System.Windows.Forms.Button();
             this.consumeBtn = new System.Windows.Forms.Button();
             this.addCustomerBtn = new System.Windows.Forms.Button();
+            this.createInvoiceBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // addBtn
@@ -105,11 +106,22 @@ namespace LumberInventoryManager
             this.addCustomerBtn.UseVisualStyleBackColor = true;
             this.addCustomerBtn.Click += new System.EventHandler(this.addCustomerBtn_Click);
             // 
+            // createInvoiceBtn
+            // 
+            this.createInvoiceBtn.Location = new System.Drawing.Point(153, 243);
+            this.createInvoiceBtn.Name = "createInvoiceBtn";
+            this.createInvoiceBtn.Size = new System.Drawing.Size(110, 33);
+            this.createInvoiceBtn.TabIndex = 8;
+            this.createInvoiceBtn.Text = "Create Invoice";
+            this.createInvoiceBtn.UseVisualStyleBackColor = true;
+            this.createInvoiceBtn.Click += new System.EventHandler(this.CreateInvoiceBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(603, 455);
+            this.Controls.Add(this.createInvoiceBtn);
             this.Controls.Add(this.addCustomerBtn);
             this.Controls.Add(this.consumeBtn);
             this.Controls.Add(this.deleteBtn);
@@ -134,6 +146,7 @@ namespace LumberInventoryManager
         private System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.Button consumeBtn;
         private System.Windows.Forms.Button addCustomerBtn;
+        private System.Windows.Forms.Button createInvoiceBtn;
     }
 }
 

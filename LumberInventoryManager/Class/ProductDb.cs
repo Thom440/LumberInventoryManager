@@ -31,6 +31,17 @@ namespace LumberInventoryManager
             }
         }
 
+        public static Invoice Add(Invoice i)
+        {
+            using(LumberContext context = new LumberContext())
+            {
+                context.Invoices.Add(i);
+                context.Customers.Attach(i.Customers[0]);
+                context.SaveChanges();
+                return i;
+            }
+        }
+
         /// <summary>
         /// Selects all products from the product table.
         /// </summary>
@@ -128,6 +139,27 @@ namespace LumberInventoryManager
                 context.Customers.Add(c);
                 context.SaveChanges();
                 return c;
+            }
+        }
+
+        public static List<Customer> GetAllCustomers()
+        {
+            using(LumberContext context = new LumberContext())
+            {
+                List< Customer> customers = (from c in context.Customers
+                                     select c).ToList();
+                return customers;
+            }
+        }
+
+        public static Customer GetCustomer(int id)
+        {
+            using(LumberContext context = new LumberContext())
+            {
+                Customer customer = (from c in context.Customers
+                                     where c.CustomerID == id
+                                     select c).Single();
+                return customer;
             }
         }
     }
