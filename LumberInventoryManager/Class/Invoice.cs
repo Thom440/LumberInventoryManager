@@ -36,5 +36,10 @@ namespace LumberInventoryManager
         {
             this.InvoiceDate = DateTime.Now;
         }
+
+        public override string ToString()
+        {
+            return $"Invoice number: {InvoiceID}";
+        }
     }
 }

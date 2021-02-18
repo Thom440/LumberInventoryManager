@@ -162,5 +162,26 @@ namespace LumberInventoryManager
                 return customer;
             }
         }
+
+        public static List<Invoice> GetAllInvoices()
+        {
+            using(LumberContext context = new LumberContext())
+            {
+                List<Invoice> invoices = (from i in context.Invoices
+                                          select i).ToList();
+                return invoices;
+            }
+        }
+
+        public static void AddInvoiceLineItem(InvoiceLineItems invoiceLineItems, Invoice invoice, Product product)
+        {
+            using(LumberContext context = new LumberContext())
+            {
+                context.InvoiceLineItems.Add(invoiceLineItems);
+                context.Products.Attach(invoiceLineItems.Product);
+                context.Invoices.Attach(invoiceLineItems.Invoice);
+                context.SaveChanges();
+            }
+        }
     }
 }

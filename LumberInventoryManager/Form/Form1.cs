@@ -89,5 +89,12 @@ namespace LumberInventoryManager
             CreateInvoiceForm createInvoice = new CreateInvoiceForm();
             createInvoice.ShowDialog();
         }
+
+        private void UpdateInvoiceBtn_Click(object sender, EventArgs e)
+        {
+            UpdateInvoiceForm updateInvoiceForm = new UpdateInvoiceForm();
+            updateInvoiceForm.ShowDialog();
+            UpdateList();
+        }
     }
 }

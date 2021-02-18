@@ -131,6 +131,12 @@
       <DependentUpon>UpdateInventoryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\Validator.cs" />
+    <Compile Include="Form\UpdateInvoiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\UpdateInvoiceForm.Designer.cs">
+      <DependentUpon>UpdateInvoiceForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form\AddCustomerForm.resx">
       <DependentUpon>AddCustomerForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\UpdateInvoiceForm.resx">
+      <DependentUpon>UpdateInvoiceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202102042338591_Initial.resx">
       <DependentUpon>202102042338591_Initial.cs</DependentUpon>
