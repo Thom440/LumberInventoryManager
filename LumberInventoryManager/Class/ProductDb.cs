@@ -178,8 +178,8 @@ namespace LumberInventoryManager
             using(LumberContext context = new LumberContext())
             {
                 context.InvoiceLineItems.Add(invoiceLineItems);
-                context.Products.Attach(invoiceLineItems.Product);
-                context.Invoices.Attach(invoiceLineItems.Invoice);
+                //context.Products.Attach(invoiceLineItems.Product);
+                //context.Invoices.Attach(invoiceLineItems.Invoice);
                 context.SaveChanges();
             }
         }

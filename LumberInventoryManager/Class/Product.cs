@@ -50,6 +50,6 @@ namespace LumberInventoryManager
 
         public List<Category> Category { get; set; } = new List<Category>();
 
-        public IList<InvoiceLineItems> InvoiceLineItems { get; set; }
+        public virtual List<InvoiceLineItems> InvoiceLineItems { get; set; } = new List<InvoiceLineItems>();
     }
 }

@@ -21,8 +21,8 @@ namespace LumberInventoryManager
         [Required]
         public short Quantity { get; set; }
 
-        public Invoice Invoice { get; set; }
+        public virtual Invoice Invoice { get; set; }
 
-        public Product Product { get; set; }
+        public virtual Product Product { get; set; }
     }
 }
