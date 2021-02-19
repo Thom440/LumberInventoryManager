@@ -168,7 +168,7 @@ namespace LumberInventoryManager
             using(LumberContext context = new LumberContext())
             {
                 List<Invoice> invoices = (from i in context.Invoices
-                                          select i).ToList();
+                                          select i).Include(c => c.Customers).ToList();
                 return invoices;
             }
         }
@@ -203,6 +203,29 @@ namespace LumberInventoryManager
                     }   
                 }
                 return false;
+            }
+        }
+
+        public static List<Product> GetInvoiceProducts(int id)
+        {
+            using(LumberContext context = new LumberContext())
+            {
+                List<Product> products = (from p in context.Products
+                                          join i in context.InvoiceLineItems on p.ProductID equals i.ProductID
+                                          where i.InvoiceID == id
+                                          select p).Include(c => c.Category).ToList();
+                return products;
+            }
+        }
+
+        public static List<InvoiceLineItems> GetInvoiceQuantities(int id)
+        {
+            using(LumberContext context = new LumberContext())
+            {
+                List<InvoiceLineItems> invoiceLineItems = (from i in context.InvoiceLineItems
+                                                           where i.InvoiceID == id
+                                                           select i).ToList();
+                return invoiceLineItems;
             }
         }
     }

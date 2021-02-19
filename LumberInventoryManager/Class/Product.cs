@@ -48,6 +48,11 @@ namespace LumberInventoryManager
             return Height + " x " + Width + " x " + Length + " In Stock " + OnHand + " Sold " + Sold + " " + String.Join(" ", Category);
         }
 
+        public string InvoiceDisplayString()
+        {
+            return Height + " x " + Width + " x " + Length + " " + String.Join(" ", Category);
+        }
+
         public List<Category> Category { get; set; } = new List<Category>();
 
         public virtual List<InvoiceLineItems> InvoiceLineItems { get; set; } = new List<InvoiceLineItems>();
