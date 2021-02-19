@@ -38,6 +38,8 @@ namespace LumberInventoryManager
             this.addCustomerBtn = new System.Windows.Forms.Button();
             this.createInvoiceBtn = new System.Windows.Forms.Button();
             this.updateInvoiceBtn = new System.Windows.Forms.Button();
+            this.viewInvoiceBtn = new System.Windows.Forms.Button();
+            this.invoiceListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // addBtn
@@ -127,11 +129,31 @@ namespace LumberInventoryManager
             this.updateInvoiceBtn.UseVisualStyleBackColor = true;
             this.updateInvoiceBtn.Click += new System.EventHandler(this.UpdateInvoiceBtn_Click);
             // 
+            // viewInvoiceBtn
+            // 
+            this.viewInvoiceBtn.Location = new System.Drawing.Point(153, 283);
+            this.viewInvoiceBtn.Name = "viewInvoiceBtn";
+            this.viewInvoiceBtn.Size = new System.Drawing.Size(110, 33);
+            this.viewInvoiceBtn.TabIndex = 10;
+            this.viewInvoiceBtn.Text = "View Invoice";
+            this.viewInvoiceBtn.UseVisualStyleBackColor = true;
+            this.viewInvoiceBtn.Click += new System.EventHandler(this.ViewInvoiceBtn_Click);
+            // 
+            // invoiceListBox
+            // 
+            this.invoiceListBox.FormattingEnabled = true;
+            this.invoiceListBox.Location = new System.Drawing.Point(280, 42);
+            this.invoiceListBox.Name = "invoiceListBox";
+            this.invoiceListBox.Size = new System.Drawing.Size(236, 95);
+            this.invoiceListBox.TabIndex = 11;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(603, 455);
+            this.Controls.Add(this.invoiceListBox);
+            this.Controls.Add(this.viewInvoiceBtn);
             this.Controls.Add(this.updateInvoiceBtn);
             this.Controls.Add(this.createInvoiceBtn);
             this.Controls.Add(this.addCustomerBtn);
@@ -160,6 +182,8 @@ namespace LumberInventoryManager
         private System.Windows.Forms.Button addCustomerBtn;
         private System.Windows.Forms.Button createInvoiceBtn;
         private System.Windows.Forms.Button updateInvoiceBtn;
+        private System.Windows.Forms.Button viewInvoiceBtn;
+        private System.Windows.Forms.ListBox invoiceListBox;
     }
 }
 

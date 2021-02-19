@@ -39,7 +39,7 @@ namespace LumberInventoryManager
 
         public override string ToString()
         {
-            return $"Invoice number: {InvoiceID}";
+            return $"Invoice number: {InvoiceID}"+ " " + String.Join(" ", Customers);
         }
     }
 }

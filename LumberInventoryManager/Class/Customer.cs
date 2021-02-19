@@ -51,7 +51,14 @@ namespace LumberInventoryManager
 
         public override string ToString()
         {
-            return $"{Business} {ContactFirstName} {ContactLastName}";
+            if (Business == String.Empty)
+            {
+                return $"{ContactFirstName} {ContactLastName}";
+            }
+            else
+            {
+                return $"{Business}";
+            }
         }
     }
 }
