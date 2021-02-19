@@ -183,5 +183,27 @@ namespace LumberInventoryManager
                 context.SaveChanges();
             }
         }
+
+        public static bool CheckForExistingProduct(Product p)
+        {
+            using(LumberContext context = new LumberContext())
+            {
+                List<Product> product = (from prod in context.Products
+                               where prod.Height == p.Height && prod.Width == p.Width
+                               && prod.Length == p.Length
+                               select prod).Include(c => c.Category).ToList();
+                for (int i = 0; i < product.Count; i++)
+                {
+                    for (int j = 0; j < p.Category.Count && product[i].Category.Count == p.Category.Count; j++)
+                    {
+                        if (product[i].Category[j].CategoryID == p.Category[j].CategoryID)
+                        {
+                            return true;
+                        }
+                    }   
+                }
+                return false;
+            }
+        }
     }
 }
