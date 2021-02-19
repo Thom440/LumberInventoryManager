@@ -84,9 +84,16 @@ namespace LumberInventoryManager
             try
             {
                 product.Category.Add(ProductDb.GetCategory(WhiteWood));
-                ProductDb.Add(product);
-                ClearTxtBoxesAndCheckBoxes();
-                messageLbl.Text = $"{product.Height} x {product.Width} x {product.Length} added successfully";
+                if (!ProductDb.CheckForExistingProduct(product))
+                {
+                    ProductDb.Add(product);
+                    ClearTxtBoxesAndCheckBoxes();
+                    messageLbl.Text = $"{product.Height} x {product.Width} x {product.Length} added successfully";
+                }
+                else
+                {
+                    messageLbl.Text = "Product already exists in database";
+                }
             }
             catch (SqlException)
             {
@@ -98,11 +105,19 @@ namespace LumberInventoryManager
         {
             try
             {
+                
                 p.Category.Add(ProductDb.GetCategory(treatmentLevel));
                 p.Category.Add(ProductDb.GetCategory(treatmentType));
-                ProductDb.Add(p);
-                ClearTxtBoxesAndCheckBoxes();
-                messageLbl.Text = $"{p.Height} x {p.Width} x {p.Length} added successfully";
+                if (!ProductDb.CheckForExistingProduct(p))
+                {
+                    ProductDb.Add(p);
+                    ClearTxtBoxesAndCheckBoxes();
+                    messageLbl.Text = $"{p.Height} x {p.Width} x {p.Length} added successfully";
+                }
+                else
+                {
+                    messageLbl.Text = "Product already exists in database";
+                }   
             }
             catch (SqlException)
             {
