@@ -95,29 +95,17 @@
     <Compile Include="Class\Invoice.cs" />
     <Compile Include="Class\InvoiceLineItems.cs" />
     <Compile Include="Class\LumberContext.cs" />
-    <Compile Include="Migrations\202102042338591_Initial.cs" />
-    <Compile Include="Migrations\202102042338591_Initial.designer.cs">
-      <DependentUpon>202102042338591_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\202102190155041_Initial.cs" />
+    <Compile Include="Migrations\202102190155041_Initial.designer.cs">
+      <DependentUpon>202102190155041_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202102050011401_Customer.cs" />
-    <Compile Include="Migrations\202102050011401_Customer.designer.cs">
-      <DependentUpon>202102050011401_Customer.cs</DependentUpon>
+    <Compile Include="Migrations\202102190208095_InvoiceLineItems.cs" />
+    <Compile Include="Migrations\202102190208095_InvoiceLineItems.designer.cs">
+      <DependentUpon>202102190208095_InvoiceLineItems.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202102080448302_MoveClasses.cs" />
-    <Compile Include="Migrations\202102080448302_MoveClasses.designer.cs">
-      <DependentUpon>202102080448302_MoveClasses.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202102152232093_ManyToMany.cs" />
-    <Compile Include="Migrations\202102152232093_ManyToMany.designer.cs">
-      <DependentUpon>202102152232093_ManyToMany.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202102170501593_ManyToManyInvoices.cs" />
-    <Compile Include="Migrations\202102170501593_ManyToManyInvoices.designer.cs">
-      <DependentUpon>202102170501593_ManyToManyInvoices.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202102182130207_Invoice.cs" />
-    <Compile Include="Migrations\202102182130207_Invoice.designer.cs">
-      <DependentUpon>202102182130207_Invoice.cs</DependentUpon>
+    <Compile Include="Migrations\202102190648378_TestingInvoiceLineItems.cs" />
+    <Compile Include="Migrations\202102190648378_TestingInvoiceLineItems.designer.cs">
+      <DependentUpon>202102190648378_TestingInvoiceLineItems.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Class\Product.cs" />
@@ -155,23 +143,14 @@
     <EmbeddedResource Include="Form\UpdateInvoiceForm.resx">
       <DependentUpon>UpdateInvoiceForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102042338591_Initial.resx">
-      <DependentUpon>202102042338591_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202102190155041_Initial.resx">
+      <DependentUpon>202102190155041_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102050011401_Customer.resx">
-      <DependentUpon>202102050011401_Customer.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202102190208095_InvoiceLineItems.resx">
+      <DependentUpon>202102190208095_InvoiceLineItems.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102080448302_MoveClasses.resx">
-      <DependentUpon>202102080448302_MoveClasses.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102152232093_ManyToMany.resx">
-      <DependentUpon>202102152232093_ManyToMany.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102170501593_ManyToManyInvoices.resx">
-      <DependentUpon>202102170501593_ManyToManyInvoices.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102182130207_Invoice.resx">
-      <DependentUpon>202102182130207_Invoice.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202102190648378_TestingInvoiceLineItems.resx">
+      <DependentUpon>202102190648378_TestingInvoiceLineItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

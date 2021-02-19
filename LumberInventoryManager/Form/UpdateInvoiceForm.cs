@@ -42,13 +42,13 @@ namespace LumberInventoryManager
             {
                 short quantity = Convert.ToInt16(quantityTxtBox.Text);
                 invoiceLineItems.Quantity = quantity;
-                invoiceLineItems.Product = product;
-                invoiceLineItems.Invoice = invoice;
+                //invoiceLineItems.Product = product;
+                //invoiceLineItems.Invoice = invoice;
 
                 try
                 {
                     ProductDb.AddInvoiceLineItem(invoiceLineItems, invoice, product);
-                    product.Sold = quantity;
+                    product.Sold += quantity;
                     ProductDb.Update(product);
                     quantityTxtBox.Text = String.Empty;
                     messageLbl.Text = "Product added successfully";
