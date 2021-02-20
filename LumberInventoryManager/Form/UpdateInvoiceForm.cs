@@ -85,6 +85,16 @@ namespace LumberInventoryManager
             {
                 invoice.ShipDate = DateTime.Now;
                 ProductDb.Update(invoice);
+
+                List<Product> products = ProductDb.GetInvoiceProducts(invoice.InvoiceID);
+                List<InvoiceLineItems> lineItems = ProductDb.GetInvoiceQuantities(invoice.InvoiceID);
+
+                for (int i = 0; i < products.Count; i++)
+                {
+                    products[i].OnHand -= lineItems[i].Quantity;
+                    products[i].Sold -= lineItems[i].Quantity;
+                    ProductDb.Update(products[i]);
+                }
             }
         }
     }
