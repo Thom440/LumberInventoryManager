@@ -38,6 +38,8 @@ namespace LumberInventoryManager
                 {
                     ProductDb.AddCustomer(customer);
                     messageLbl.Text = $"{customer.ContactFirstName} {customer.ContactLastName} was added successfully.";
+                    ClearTxtBoxes();
+
                 }
                 catch (SqlException)
                 {
@@ -51,6 +53,17 @@ namespace LumberInventoryManager
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
             }
+        }
+
+        private void ClearTxtBoxes()
+        {
+            businessTxtBox.Text = String.Empty;
+            firstNameTxtBox.Text = String.Empty;
+            lastNameTxtBox.Text = String.Empty;
+            addressTxtBox.Text = String.Empty;
+            cityTxtBox.Text = String.Empty;
+            stateTxtBox.Text = String.Empty;
+            zipCodeTxtBox.Text = String.Empty;
         }
 
         private void CancelBtn_Click(object sender, EventArgs e)
