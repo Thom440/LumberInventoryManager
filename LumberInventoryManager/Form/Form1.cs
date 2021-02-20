@@ -107,6 +107,7 @@ namespace LumberInventoryManager
             UpdateInvoiceForm updateInvoiceForm = new UpdateInvoiceForm();
             updateInvoiceForm.ShowDialog();
             UpdateList();
+            UpdateInvoiceList();
         }
 
         private void ViewInvoiceBtn_Click(object sender, EventArgs e)
