@@ -40,6 +40,7 @@ namespace LumberInventoryManager
             this.updateInvoiceBtn = new System.Windows.Forms.Button();
             this.viewInvoiceBtn = new System.Windows.Forms.Button();
             this.invoiceListBox = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // addBtn
@@ -57,7 +58,7 @@ namespace LumberInventoryManager
             this.productListBox.FormattingEnabled = true;
             this.productListBox.Location = new System.Drawing.Point(12, 42);
             this.productListBox.Name = "productListBox";
-            this.productListBox.Size = new System.Drawing.Size(251, 95);
+            this.productListBox.Size = new System.Drawing.Size(236, 95);
             this.productListBox.TabIndex = 2;
             // 
             // label1
@@ -71,7 +72,7 @@ namespace LumberInventoryManager
             // 
             // updateBtn
             // 
-            this.updateBtn.Location = new System.Drawing.Point(153, 162);
+            this.updateBtn.Location = new System.Drawing.Point(138, 162);
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.Size = new System.Drawing.Size(110, 32);
             this.updateBtn.TabIndex = 4;
@@ -91,7 +92,7 @@ namespace LumberInventoryManager
             // 
             // consumeBtn
             // 
-            this.consumeBtn.Location = new System.Drawing.Point(153, 201);
+            this.consumeBtn.Location = new System.Drawing.Point(138, 202);
             this.consumeBtn.Name = "consumeBtn";
             this.consumeBtn.Size = new System.Drawing.Size(110, 34);
             this.consumeBtn.TabIndex = 6;
@@ -101,9 +102,9 @@ namespace LumberInventoryManager
             // 
             // addCustomerBtn
             // 
-            this.addCustomerBtn.Location = new System.Drawing.Point(13, 243);
+            this.addCustomerBtn.Location = new System.Drawing.Point(397, 201);
             this.addCustomerBtn.Name = "addCustomerBtn";
-            this.addCustomerBtn.Size = new System.Drawing.Size(119, 33);
+            this.addCustomerBtn.Size = new System.Drawing.Size(119, 34);
             this.addCustomerBtn.TabIndex = 7;
             this.addCustomerBtn.Text = "Add Customer";
             this.addCustomerBtn.UseVisualStyleBackColor = true;
@@ -111,7 +112,7 @@ namespace LumberInventoryManager
             // 
             // createInvoiceBtn
             // 
-            this.createInvoiceBtn.Location = new System.Drawing.Point(153, 243);
+            this.createInvoiceBtn.Location = new System.Drawing.Point(280, 161);
             this.createInvoiceBtn.Name = "createInvoiceBtn";
             this.createInvoiceBtn.Size = new System.Drawing.Size(110, 33);
             this.createInvoiceBtn.TabIndex = 8;
@@ -121,9 +122,9 @@ namespace LumberInventoryManager
             // 
             // updateInvoiceBtn
             // 
-            this.updateInvoiceBtn.Location = new System.Drawing.Point(13, 283);
+            this.updateInvoiceBtn.Location = new System.Drawing.Point(397, 162);
             this.updateInvoiceBtn.Name = "updateInvoiceBtn";
-            this.updateInvoiceBtn.Size = new System.Drawing.Size(119, 33);
+            this.updateInvoiceBtn.Size = new System.Drawing.Size(119, 32);
             this.updateInvoiceBtn.TabIndex = 9;
             this.updateInvoiceBtn.Text = "Update Invoice";
             this.updateInvoiceBtn.UseVisualStyleBackColor = true;
@@ -131,9 +132,9 @@ namespace LumberInventoryManager
             // 
             // viewInvoiceBtn
             // 
-            this.viewInvoiceBtn.Location = new System.Drawing.Point(153, 283);
+            this.viewInvoiceBtn.Location = new System.Drawing.Point(280, 201);
             this.viewInvoiceBtn.Name = "viewInvoiceBtn";
-            this.viewInvoiceBtn.Size = new System.Drawing.Size(110, 33);
+            this.viewInvoiceBtn.Size = new System.Drawing.Size(110, 34);
             this.viewInvoiceBtn.TabIndex = 10;
             this.viewInvoiceBtn.Text = "View Invoice";
             this.viewInvoiceBtn.UseVisualStyleBackColor = true;
@@ -147,11 +148,21 @@ namespace LumberInventoryManager
             this.invoiceListBox.Size = new System.Drawing.Size(236, 95);
             this.invoiceListBox.TabIndex = 11;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(371, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Invoices";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(603, 455);
+            this.ClientSize = new System.Drawing.Size(528, 248);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.invoiceListBox);
             this.Controls.Add(this.viewInvoiceBtn);
             this.Controls.Add(this.updateInvoiceBtn);
@@ -164,7 +175,7 @@ namespace LumberInventoryManager
             this.Controls.Add(this.productListBox);
             this.Controls.Add(this.addBtn);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Lumber Inventory Manager";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -184,6 +195,7 @@ namespace LumberInventoryManager
         private System.Windows.Forms.Button updateInvoiceBtn;
         private System.Windows.Forms.Button viewInvoiceBtn;
         private System.Windows.Forms.ListBox invoiceListBox;
+        private System.Windows.Forms.Label label2;
     }
 }
 

@@ -46,16 +46,16 @@ namespace LumberInventoryManager
             // 
             // unitTxtBox
             // 
-            this.unitTxtBox.Location = new System.Drawing.Point(13, 191);
+            this.unitTxtBox.Location = new System.Drawing.Point(15, 177);
             this.unitTxtBox.Name = "unitTxtBox";
             this.unitTxtBox.Size = new System.Drawing.Size(49, 20);
             this.unitTxtBox.TabIndex = 1;
             // 
             // addBtn
             // 
-            this.addBtn.Location = new System.Drawing.Point(13, 217);
+            this.addBtn.Location = new System.Drawing.Point(15, 203);
             this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(75, 23);
+            this.addBtn.Size = new System.Drawing.Size(85, 26);
             this.addBtn.TabIndex = 2;
             this.addBtn.Text = "Add";
             this.addBtn.UseVisualStyleBackColor = true;
@@ -64,7 +64,7 @@ namespace LumberInventoryManager
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 172);
+            this.label1.Location = new System.Drawing.Point(12, 161);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 13);
             this.label1.TabIndex = 3;
@@ -72,9 +72,9 @@ namespace LumberInventoryManager
             // 
             // cancelBtn
             // 
-            this.cancelBtn.Location = new System.Drawing.Point(121, 217);
+            this.cancelBtn.Location = new System.Drawing.Point(117, 203);
             this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(75, 23);
+            this.cancelBtn.Size = new System.Drawing.Size(82, 26);
             this.cancelBtn.TabIndex = 4;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = true;

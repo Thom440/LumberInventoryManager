@@ -57,7 +57,7 @@ namespace LumberInventoryManager
             // 
             this.createInvoiceBtn.Location = new System.Drawing.Point(16, 62);
             this.createInvoiceBtn.Name = "createInvoiceBtn";
-            this.createInvoiceBtn.Size = new System.Drawing.Size(98, 31);
+            this.createInvoiceBtn.Size = new System.Drawing.Size(123, 31);
             this.createInvoiceBtn.TabIndex = 2;
             this.createInvoiceBtn.Text = "Create Invoice";
             this.createInvoiceBtn.UseVisualStyleBackColor = true;
@@ -65,9 +65,9 @@ namespace LumberInventoryManager
             // 
             // closeBtn
             // 
-            this.closeBtn.Location = new System.Drawing.Point(159, 62);
+            this.closeBtn.Location = new System.Drawing.Point(145, 63);
             this.closeBtn.Name = "closeBtn";
-            this.closeBtn.Size = new System.Drawing.Size(95, 30);
+            this.closeBtn.Size = new System.Drawing.Size(125, 30);
             this.closeBtn.TabIndex = 3;
             this.closeBtn.Text = "Close";
             this.closeBtn.UseVisualStyleBackColor = true;
@@ -86,7 +86,7 @@ namespace LumberInventoryManager
             this.AcceptButton = this.createInvoiceBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(317, 130);
+            this.ClientSize = new System.Drawing.Size(281, 130);
             this.Controls.Add(this.messageLbl);
             this.Controls.Add(this.closeBtn);
             this.Controls.Add(this.createInvoiceBtn);

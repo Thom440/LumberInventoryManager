@@ -50,35 +50,35 @@ namespace LumberInventoryManager
             // 
             // firstNameTxtBox
             // 
-            this.firstNameTxtBox.Location = new System.Drawing.Point(100, 43);
+            this.firstNameTxtBox.Location = new System.Drawing.Point(99, 17);
             this.firstNameTxtBox.Name = "firstNameTxtBox";
-            this.firstNameTxtBox.Size = new System.Drawing.Size(122, 20);
+            this.firstNameTxtBox.Size = new System.Drawing.Size(200, 20);
             this.firstNameTxtBox.TabIndex = 0;
             // 
             // lastNameTxtBox
             // 
-            this.lastNameTxtBox.Location = new System.Drawing.Point(316, 43);
+            this.lastNameTxtBox.Location = new System.Drawing.Point(99, 49);
             this.lastNameTxtBox.Name = "lastNameTxtBox";
-            this.lastNameTxtBox.Size = new System.Drawing.Size(119, 20);
+            this.lastNameTxtBox.Size = new System.Drawing.Size(200, 20);
             this.lastNameTxtBox.TabIndex = 1;
             // 
             // addressTxtBox
             // 
-            this.addressTxtBox.Location = new System.Drawing.Point(100, 97);
+            this.addressTxtBox.Location = new System.Drawing.Point(99, 84);
             this.addressTxtBox.Name = "addressTxtBox";
-            this.addressTxtBox.Size = new System.Drawing.Size(220, 20);
+            this.addressTxtBox.Size = new System.Drawing.Size(200, 20);
             this.addressTxtBox.TabIndex = 2;
             // 
             // cityTxtBox
             // 
-            this.cityTxtBox.Location = new System.Drawing.Point(100, 153);
+            this.cityTxtBox.Location = new System.Drawing.Point(99, 119);
             this.cityTxtBox.Name = "cityTxtBox";
             this.cityTxtBox.Size = new System.Drawing.Size(100, 20);
             this.cityTxtBox.TabIndex = 3;
             // 
             // stateTxtBox
             // 
-            this.stateTxtBox.Location = new System.Drawing.Point(280, 153);
+            this.stateTxtBox.Location = new System.Drawing.Point(259, 119);
             this.stateTxtBox.MaxLength = 2;
             this.stateTxtBox.Name = "stateTxtBox";
             this.stateTxtBox.Size = new System.Drawing.Size(40, 20);
@@ -86,7 +86,7 @@ namespace LumberInventoryManager
             // 
             // zipCodeTxtBox
             // 
-            this.zipCodeTxtBox.Location = new System.Drawing.Point(100, 208);
+            this.zipCodeTxtBox.Location = new System.Drawing.Point(99, 155);
             this.zipCodeTxtBox.MaxLength = 5;
             this.zipCodeTxtBox.Name = "zipCodeTxtBox";
             this.zipCodeTxtBox.Size = new System.Drawing.Size(100, 20);
@@ -95,7 +95,7 @@ namespace LumberInventoryManager
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 46);
+            this.label1.Location = new System.Drawing.Point(30, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 13);
             this.label1.TabIndex = 6;
@@ -104,7 +104,7 @@ namespace LumberInventoryManager
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(249, 46);
+            this.label2.Location = new System.Drawing.Point(32, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 7;
@@ -113,7 +113,7 @@ namespace LumberInventoryManager
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 100);
+            this.label3.Location = new System.Drawing.Point(14, 87);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 13);
             this.label3.TabIndex = 8;
@@ -122,7 +122,7 @@ namespace LumberInventoryManager
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(67, 156);
+            this.label4.Location = new System.Drawing.Point(66, 126);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(27, 13);
             this.label4.TabIndex = 9;
@@ -131,7 +131,7 @@ namespace LumberInventoryManager
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(239, 156);
+            this.label5.Location = new System.Drawing.Point(218, 126);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 10;
@@ -140,7 +140,7 @@ namespace LumberInventoryManager
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(41, 211);
+            this.label6.Location = new System.Drawing.Point(40, 158);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 13);
             this.label6.TabIndex = 11;
@@ -148,7 +148,7 @@ namespace LumberInventoryManager
             // 
             // addCustomerBtn
             // 
-            this.addCustomerBtn.Location = new System.Drawing.Point(232, 200);
+            this.addCustomerBtn.Location = new System.Drawing.Point(43, 225);
             this.addCustomerBtn.Name = "addCustomerBtn";
             this.addCustomerBtn.Size = new System.Drawing.Size(88, 28);
             this.addCustomerBtn.TabIndex = 12;
@@ -158,7 +158,7 @@ namespace LumberInventoryManager
             // 
             // cancelBtn
             // 
-            this.cancelBtn.Location = new System.Drawing.Point(232, 256);
+            this.cancelBtn.Location = new System.Drawing.Point(156, 225);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(88, 28);
             this.cancelBtn.TabIndex = 13;
@@ -168,7 +168,7 @@ namespace LumberInventoryManager
             // 
             // businessTxtBox
             // 
-            this.businessTxtBox.Location = new System.Drawing.Point(100, 261);
+            this.businessTxtBox.Location = new System.Drawing.Point(99, 187);
             this.businessTxtBox.Name = "businessTxtBox";
             this.businessTxtBox.Size = new System.Drawing.Size(100, 20);
             this.businessTxtBox.TabIndex = 14;
@@ -176,7 +176,7 @@ namespace LumberInventoryManager
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(37, 267);
+            this.label7.Location = new System.Drawing.Point(41, 190);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(52, 13);
             this.label7.TabIndex = 15;
@@ -185,7 +185,7 @@ namespace LumberInventoryManager
             // messageLbl
             // 
             this.messageLbl.AutoSize = true;
-            this.messageLbl.Location = new System.Drawing.Point(41, 306);
+            this.messageLbl.Location = new System.Drawing.Point(41, 268);
             this.messageLbl.Name = "messageLbl";
             this.messageLbl.Size = new System.Drawing.Size(0, 13);
             this.messageLbl.TabIndex = 16;
@@ -195,7 +195,7 @@ namespace LumberInventoryManager
             this.AcceptButton = this.addCustomerBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(452, 328);
+            this.ClientSize = new System.Drawing.Size(313, 297);
             this.Controls.Add(this.messageLbl);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.businessTxtBox);

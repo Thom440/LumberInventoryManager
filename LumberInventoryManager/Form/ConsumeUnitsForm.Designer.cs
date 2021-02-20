@@ -44,7 +44,7 @@ namespace LumberInventoryManager
             // consumeProductBox
             // 
             this.consumeProductBox.FormattingEnabled = true;
-            this.consumeProductBox.Location = new System.Drawing.Point(12, 43);
+            this.consumeProductBox.Location = new System.Drawing.Point(16, 43);
             this.consumeProductBox.Name = "consumeProductBox";
             this.consumeProductBox.Size = new System.Drawing.Size(236, 21);
             this.consumeProductBox.TabIndex = 0;
@@ -71,14 +71,14 @@ namespace LumberInventoryManager
             // produceProductBox
             // 
             this.produceProductBox.FormattingEnabled = true;
-            this.produceProductBox.Location = new System.Drawing.Point(12, 116);
+            this.produceProductBox.Location = new System.Drawing.Point(16, 116);
             this.produceProductBox.Name = "produceProductBox";
             this.produceProductBox.Size = new System.Drawing.Size(236, 21);
             this.produceProductBox.TabIndex = 3;
             // 
             // consumeNumber
             // 
-            this.consumeNumber.Location = new System.Drawing.Point(12, 169);
+            this.consumeNumber.Location = new System.Drawing.Point(16, 168);
             this.consumeNumber.MaxLength = 2;
             this.consumeNumber.Name = "consumeNumber";
             this.consumeNumber.Size = new System.Drawing.Size(36, 20);
@@ -134,7 +134,7 @@ namespace LumberInventoryManager
             this.AcceptButton = this.consumeBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(279, 271);
+            this.ClientSize = new System.Drawing.Size(261, 271);
             this.Controls.Add(this.closeBtn);
             this.Controls.Add(this.consumeBtn);
             this.Controls.Add(this.produceUnits);
