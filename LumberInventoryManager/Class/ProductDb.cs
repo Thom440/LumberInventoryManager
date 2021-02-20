@@ -173,13 +173,11 @@ namespace LumberInventoryManager
             }
         }
 
-        public static void AddInvoiceLineItem(InvoiceLineItems invoiceLineItems, Invoice invoice, Product product)
+        public static void AddInvoiceLineItem(InvoiceLineItems invoiceLineItems)
         {
             using(LumberContext context = new LumberContext())
             {
                 context.InvoiceLineItems.Add(invoiceLineItems);
-                //context.Products.Attach(invoiceLineItems.Product);
-                //context.Invoices.Attach(invoiceLineItems.Invoice);
                 context.SaveChanges();
             }
         }
