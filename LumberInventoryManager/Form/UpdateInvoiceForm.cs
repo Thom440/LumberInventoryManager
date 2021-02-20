@@ -66,10 +66,10 @@ namespace LumberInventoryManager
                         messageLbl.Text = "Failed to add product";
                     }
                 }
+            }
             else
-                {
-                    MessageBox.Show("No invoice is selected", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+            {
+                MessageBox.Show("No invoice is selected", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
