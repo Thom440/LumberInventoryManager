@@ -38,6 +38,7 @@ namespace LumberInventoryManager
             this.addBtn = new System.Windows.Forms.Button();
             this.closeBtn = new System.Windows.Forms.Button();
             this.messageLbl = new System.Windows.Forms.Label();
+            this.productShippedBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // invoiceCmbBox
@@ -92,9 +93,9 @@ namespace LumberInventoryManager
             // 
             // addBtn
             // 
-            this.addBtn.Location = new System.Drawing.Point(78, 143);
+            this.addBtn.Location = new System.Drawing.Point(25, 143);
             this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(100, 33);
+            this.addBtn.Size = new System.Drawing.Size(61, 33);
             this.addBtn.TabIndex = 6;
             this.addBtn.Text = "Add";
             this.addBtn.UseVisualStyleBackColor = true;
@@ -102,9 +103,9 @@ namespace LumberInventoryManager
             // 
             // closeBtn
             // 
-            this.closeBtn.Location = new System.Drawing.Point(215, 143);
+            this.closeBtn.Location = new System.Drawing.Point(220, 143);
             this.closeBtn.Name = "closeBtn";
-            this.closeBtn.Size = new System.Drawing.Size(100, 33);
+            this.closeBtn.Size = new System.Drawing.Size(63, 33);
             this.closeBtn.TabIndex = 7;
             this.closeBtn.Text = "Close";
             this.closeBtn.UseVisualStyleBackColor = true;
@@ -118,12 +119,23 @@ namespace LumberInventoryManager
             this.messageLbl.Size = new System.Drawing.Size(0, 13);
             this.messageLbl.TabIndex = 8;
             // 
+            // productShippedBtn
+            // 
+            this.productShippedBtn.Location = new System.Drawing.Point(104, 143);
+            this.productShippedBtn.Name = "productShippedBtn";
+            this.productShippedBtn.Size = new System.Drawing.Size(99, 33);
+            this.productShippedBtn.TabIndex = 9;
+            this.productShippedBtn.Text = "Product Shipped";
+            this.productShippedBtn.UseVisualStyleBackColor = true;
+            this.productShippedBtn.Click += new System.EventHandler(this.ProductShippedBtn_Click);
+            // 
             // UpdateInvoiceForm
             // 
             this.AcceptButton = this.addBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(327, 223);
+            this.Controls.Add(this.productShippedBtn);
             this.Controls.Add(this.messageLbl);
             this.Controls.Add(this.closeBtn);
             this.Controls.Add(this.addBtn);
@@ -152,5 +164,6 @@ namespace LumberInventoryManager
         private System.Windows.Forms.Button addBtn;
         private System.Windows.Forms.Button closeBtn;
         private System.Windows.Forms.Label messageLbl;
+        private System.Windows.Forms.Button productShippedBtn;
     }
 }

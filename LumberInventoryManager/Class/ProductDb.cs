@@ -228,5 +228,14 @@ namespace LumberInventoryManager
                 return invoiceLineItems;
             }
         }
+
+        public static void Update(Invoice i)
+        {
+            using (LumberContext context = new LumberContext())
+            {
+                context.Entry(i).State = EntityState.Modified;
+                context.SaveChanges();
+            }
+        }
     }
 }
