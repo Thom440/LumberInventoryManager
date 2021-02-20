@@ -35,6 +35,11 @@ namespace LumberInventoryManager
             if (invoice != null)
             {
                 Product product = (Product)productCmbBox.SelectedItem;
+                if (product == null)
+                {
+                    MessageBox.Show("No product selected", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
                 InvoiceLineItems invoiceLineItems = new InvoiceLineItems();
                 invoiceLineItems.ProductID = product.ProductID;
