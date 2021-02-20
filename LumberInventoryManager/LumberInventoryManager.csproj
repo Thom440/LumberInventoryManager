@@ -99,17 +99,9 @@
     <Compile Include="Class\Invoice.cs" />
     <Compile Include="Class\InvoiceLineItems.cs" />
     <Compile Include="Class\LumberContext.cs" />
-    <Compile Include="Migrations\202102190155041_Initial.cs" />
-    <Compile Include="Migrations\202102190155041_Initial.designer.cs">
-      <DependentUpon>202102190155041_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202102190208095_InvoiceLineItems.cs" />
-    <Compile Include="Migrations\202102190208095_InvoiceLineItems.designer.cs">
-      <DependentUpon>202102190208095_InvoiceLineItems.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202102190648378_TestingInvoiceLineItems.cs" />
-    <Compile Include="Migrations\202102190648378_TestingInvoiceLineItems.designer.cs">
-      <DependentUpon>202102190648378_TestingInvoiceLineItems.cs</DependentUpon>
+    <Compile Include="Migrations\202102202049098_Initial.cs" />
+    <Compile Include="Migrations\202102202049098_Initial.designer.cs">
+      <DependentUpon>202102202049098_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Class\Product.cs" />
@@ -147,14 +139,8 @@
     <EmbeddedResource Include="Form\UpdateInvoiceForm.resx">
       <DependentUpon>UpdateInvoiceForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102190155041_Initial.resx">
-      <DependentUpon>202102190155041_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102190208095_InvoiceLineItems.resx">
-      <DependentUpon>202102190208095_InvoiceLineItems.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102190648378_TestingInvoiceLineItems.resx">
-      <DependentUpon>202102190648378_TestingInvoiceLineItems.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202102202049098_Initial.resx">
+      <DependentUpon>202102202049098_Initial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
