@@ -12,6 +12,9 @@ namespace LumberInventoryManager
 {
     public partial class UpdateInventoryForm : Form
     {
+        /// <summary>
+        /// Changes the quantity of a selected product.
+        /// </summary>
         public UpdateInventoryForm()
         {
             InitializeComponent();
@@ -24,6 +27,11 @@ namespace LumberInventoryManager
             productListBox.DisplayMember = nameof(Product.ToString);
         }
 
+        /// <summary>
+        /// Changes the number of units on hand.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddBtn_Click(object sender, EventArgs e)
         {
             if (Validator.IsShort(unitTxtBox.Text))
@@ -40,6 +48,11 @@ namespace LumberInventoryManager
             }
         }
 
+        /// <summary>
+        /// Closes form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CancelBtn_Click(object sender, EventArgs e)
         {
             Close();

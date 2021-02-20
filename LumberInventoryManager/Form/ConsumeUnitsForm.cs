@@ -12,6 +12,9 @@ namespace LumberInventoryManager
 {
     public partial class ConsumeUnitsForm : Form
     {
+        /// <summary>
+        /// Form that consumes units into smaller units.
+        /// </summary>
         public ConsumeUnitsForm()
         {
             InitializeComponent();
@@ -23,6 +26,12 @@ namespace LumberInventoryManager
             consumeProductBox.DataSource = products;
         }
 
+        /// <summary>
+        /// Once product is selected, changes list of that products. 
+        /// In addition changes list of larger products being consumed.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ConsumeProductBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             Product product = (Product)consumeProductBox.SelectedItem;
@@ -30,6 +39,11 @@ namespace LumberInventoryManager
             produceProductBox.DataSource = products.ToList();
         }
 
+        /// <summary>
+        /// The button that initiates consumption of products.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ConsumeBtn_Click(object sender, EventArgs e)
         {
             Product consumedProduct = (Product)consumeProductBox.SelectedItem;
@@ -51,6 +65,11 @@ namespace LumberInventoryManager
             }
         }
 
+        /// <summary>
+        /// Closes form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CloseBtn_Click(object sender, EventArgs e)
         {
             Close();

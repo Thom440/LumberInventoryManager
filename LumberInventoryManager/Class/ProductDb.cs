@@ -31,6 +31,11 @@ namespace LumberInventoryManager
             }
         }
 
+        /// <summary>
+        /// Adds an invoice to the database.
+        /// </summary>
+        /// <param name="i">The invoice to be added.</param>
+        /// <returns></returns>
         public static Invoice Add(Invoice i)
         {
             using(LumberContext context = new LumberContext())
@@ -132,6 +137,11 @@ namespace LumberInventoryManager
             }
         }
 
+        /// <summary>
+        /// Adds customer to database.
+        /// </summary>
+        /// <param name="c">The customer to be added.</param>
+        /// <returns></returns>
         public static Customer AddCustomer(Customer c)
         {
             using (LumberContext context = new LumberContext())
@@ -142,6 +152,10 @@ namespace LumberInventoryManager
             }
         }
 
+        /// <summary>
+        /// Grabs all customers from database.
+        /// </summary>
+        /// <returns></returns>
         public static List<Customer> GetAllCustomers()
         {
             using(LumberContext context = new LumberContext())
@@ -152,6 +166,11 @@ namespace LumberInventoryManager
             }
         }
 
+        /// <summary>
+        /// Grabs a single customer from the database.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public static Customer GetCustomer(int id)
         {
             using(LumberContext context = new LumberContext())
@@ -163,6 +182,10 @@ namespace LumberInventoryManager
             }
         }
 
+        /// <summary>
+        /// Gets all the Invoices.
+        /// </summary>
+        /// <returns></returns>
         public static List<Invoice> GetAllInvoices()
         {
             using(LumberContext context = new LumberContext())
@@ -173,6 +196,10 @@ namespace LumberInventoryManager
             }
         }
 
+        /// <summary>
+        /// Adds an invoice line item to the database.
+        /// </summary>
+        /// <param name="invoiceLineItems">Invoice line item to be added.</param>
         public static void AddInvoiceLineItem(InvoiceLineItems invoiceLineItems)
         {
             using(LumberContext context = new LumberContext())
@@ -182,6 +209,11 @@ namespace LumberInventoryManager
             }
         }
 
+        /// <summary>
+        /// Checks to see if product already exists in database.
+        /// </summary>
+        /// <param name="p">The product to be checked.</param>
+        /// <returns></returns>
         public static bool CheckForExistingProduct(Product p)
         {
             using(LumberContext context = new LumberContext())
@@ -204,6 +236,11 @@ namespace LumberInventoryManager
             }
         }
 
+        /// <summary>
+        /// Grabs the product from an invoice.
+        /// </summary>
+        /// <param name="id">The product to show.</param>
+        /// <returns></returns>
         public static List<Product> GetInvoiceProducts(int id)
         {
             using(LumberContext context = new LumberContext())
@@ -216,6 +253,11 @@ namespace LumberInventoryManager
             }
         }
 
+        /// <summary>
+        /// Gets all of the invoice line items.
+        /// </summary>
+        /// <param name="id">invoice line items to show.</param>
+        /// <returns></returns>
         public static List<InvoiceLineItems> GetInvoiceQuantities(int id)
         {
             using(LumberContext context = new LumberContext())
@@ -227,6 +269,10 @@ namespace LumberInventoryManager
             }
         }
 
+        /// <summary>
+        /// Updates the invoice.
+        /// </summary>
+        /// <param name="i">Invoice to be updated.</param>
         public static void Update(Invoice i)
         {
             using (LumberContext context = new LumberContext())

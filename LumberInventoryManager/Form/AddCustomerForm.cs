@@ -13,11 +13,19 @@ namespace LumberInventoryManager
 {
     public partial class AddCustomerForm : Form
     {
+        /// <summary>
+        /// The form to add a customer.
+        /// </summary>
         public AddCustomerForm()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Button to add a customer to the list and database.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddCustomerBtn_Click(object sender, EventArgs e)
         {
             if (Validator.IsPresent(firstNameTxtBox) && Validator.IsPresent(lastNameTxtBox)
@@ -55,6 +63,9 @@ namespace LumberInventoryManager
             }
         }
 
+        /// <summary>
+        /// Clears TextBoxes when the button is clicked.
+        /// </summary>
         private void ClearTxtBoxes()
         {
             businessTxtBox.Text = String.Empty;
@@ -66,6 +77,11 @@ namespace LumberInventoryManager
             zipCodeTxtBox.Text = String.Empty;
         }
 
+        /// <summary>
+        /// Closes form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CancelBtn_Click(object sender, EventArgs e)
         {
             Close();

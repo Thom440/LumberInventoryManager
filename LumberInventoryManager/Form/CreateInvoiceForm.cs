@@ -13,6 +13,9 @@ namespace LumberInventoryManager
 {
     public partial class CreateInvoiceForm : Form
     {
+        /// <summary>
+        /// Form that creates a new Invoice.
+        /// </summary>
         public CreateInvoiceForm()
         {
             InitializeComponent();
@@ -24,6 +27,11 @@ namespace LumberInventoryManager
             customerComboBox1.DataSource = customers.ToList();
         }
 
+        /// <summary>
+        /// Button to create an Invoice.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CreateInvoiceBtn_Click(object sender, EventArgs e)
         {
             Customer customer = (Customer)customerComboBox1.SelectedItem;
@@ -49,6 +57,11 @@ namespace LumberInventoryManager
             
         }
 
+        /// <summary>
+        /// Closes Form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CloseBtn_Click(object sender, EventArgs e)
         {
             Close();
