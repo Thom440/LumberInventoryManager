@@ -27,17 +27,25 @@ namespace LumberInventoryManager
         private void CreateInvoiceBtn_Click(object sender, EventArgs e)
         {
             Customer customer = (Customer)customerComboBox1.SelectedItem;
-            Invoice invoice = new Invoice();
-            invoice.Customers.Add(customer);
-            try
+            if (customer != null)
             {
-                ProductDb.Add(invoice);
-                messageLbl.Text = "Invoice Created";
+                Invoice invoice = new Invoice();
+                invoice.Customers.Add(customer);
+                try
+                {
+                    ProductDb.Add(invoice);
+                    messageLbl.Text = "Invoice Created";
+                }
+                catch (SqlException)
+                {
+                    messageLbl.Text = "Failed to create invoice";
+                }
             }
-            catch (SqlException)
+            else
             {
-                messageLbl.Text = "Failed to create invoice";
+                MessageBox.Show("No customer selected", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            
             
         }
 
