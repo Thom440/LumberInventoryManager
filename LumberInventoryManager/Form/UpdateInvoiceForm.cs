@@ -32,31 +32,38 @@ namespace LumberInventoryManager
         private void AddBtn_Click(object sender, EventArgs e)
         {
             Invoice invoice = (Invoice)invoiceCmbBox.SelectedItem;
-            Product product = (Product)productCmbBox.SelectedItem;
-
-            InvoiceLineItems invoiceLineItems = new InvoiceLineItems();
-            invoiceLineItems.ProductID = product.ProductID;
-            invoiceLineItems.InvoiceID = invoice.InvoiceID;
-
-            if (Validator.IsShort(quantityTxtBox.Text))
+            if (invoice != null)
             {
-                short quantity = Convert.ToInt16(quantityTxtBox.Text);
-                invoiceLineItems.Quantity = quantity;
-                //invoiceLineItems.Product = product;
-                //invoiceLineItems.Invoice = invoice;
+                Product product = (Product)productCmbBox.SelectedItem;
 
-                try
+                InvoiceLineItems invoiceLineItems = new InvoiceLineItems();
+                invoiceLineItems.ProductID = product.ProductID;
+                invoiceLineItems.InvoiceID = invoice.InvoiceID;
+
+                if (Validator.IsShort(quantityTxtBox.Text))
                 {
-                    ProductDb.AddInvoiceLineItem(invoiceLineItems, invoice, product);
-                    product.Sold += quantity;
-                    ProductDb.Update(product);
-                    quantityTxtBox.Text = String.Empty;
-                    messageLbl.Text = "Product added successfully";
+                    short quantity = Convert.ToInt16(quantityTxtBox.Text);
+                    invoiceLineItems.Quantity = quantity;
+                    //invoiceLineItems.Product = product;
+                    //invoiceLineItems.Invoice = invoice;
+
+                    try
+                    {
+                        ProductDb.AddInvoiceLineItem(invoiceLineItems, invoice, product);
+                        product.Sold += quantity;
+                        ProductDb.Update(product);
+                        quantityTxtBox.Text = String.Empty;
+                        messageLbl.Text = "Product added successfully";
+                    }
+                    catch (SqlException)
+                    {
+
+                        messageLbl.Text = "Failed to add product";
+                    }
                 }
-                catch (SqlException)
+            else
                 {
-
-                    messageLbl.Text = "Failed to add product";
+                    MessageBox.Show("No invoice is selected", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
