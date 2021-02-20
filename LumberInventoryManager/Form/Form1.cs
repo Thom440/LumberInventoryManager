@@ -13,18 +13,31 @@ namespace LumberInventoryManager
 {
     public partial class Form1 : Form
     {
+        /// <summary>
+        /// Main Form.
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Launches the Add Product form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddBtn_Click(object sender, EventArgs e)
         {
             AddProduct addProduct = new AddProduct();
-            DialogResult result = addProduct.ShowDialog();
+            addProduct.ShowDialog();
             UpdateList();
         }
 
+        /// <summary>
+        /// Loads main form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
             List<Product> products = ProductDb.GetAllProducts();
@@ -35,13 +48,23 @@ namespace LumberInventoryManager
             invoiceListBox.DataSource = invoices.ToList();
         }
 
+        /// <summary>
+        /// Launches Update Inventory Form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
             UpdateInventoryForm updateInventory = new UpdateInventoryForm();
-            DialogResult result = updateInventory.ShowDialog();
+            updateInventory.ShowDialog();
             UpdateList();
         }
 
+        /// <summary>
+        /// Deletes Product from Database.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DeleteBtn_Click(object sender, EventArgs e)
         {   
             Product product = (Product)productListBox.SelectedItem;
@@ -56,6 +79,9 @@ namespace LumberInventoryManager
             }
         }
 
+        /// <summary>
+        /// Updates the product list.
+        /// </summary>
         private void UpdateList()
         {
             productListBox.DataSource = null;
@@ -63,9 +89,13 @@ namespace LumberInventoryManager
             List<Product> products = ProductDb.GetAllProducts();
             IEnumerable<Product> distinctProducts = products.Distinct<Product>();
             productListBox.DataSource = distinctProducts.ToList();
-            productListBox.DisplayMember = nameof(Product);
         }
 
+        /// <summary>
+        /// Launches the Consume Product form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ConsumeBtn_Click(object sender, EventArgs e)
         {
             List<Product> product = ProductDb.GetAllProducts();
@@ -82,12 +112,22 @@ namespace LumberInventoryManager
             
         }
 
+        /// <summary>
+        /// Launches the Add Customer Form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddCustomerBtn_Click(object sender, EventArgs e)
         {
             AddCustomerForm addCustomerForm = new AddCustomerForm();
             addCustomerForm.ShowDialog();
         }
 
+        /// <summary>
+        /// Launches the Create Invoice form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CreateInvoiceBtn_Click(object sender, EventArgs e)
         {
             CreateInvoiceForm createInvoice = new CreateInvoiceForm();
@@ -95,6 +135,9 @@ namespace LumberInventoryManager
             UpdateInvoiceList();
         }
 
+        /// <summary>
+        /// Updates the invoice list.
+        /// </summary>
         private void UpdateInvoiceList()
         {
             invoiceListBox.DataSource = null;
@@ -102,6 +145,11 @@ namespace LumberInventoryManager
             invoiceListBox.DataSource = invoices.ToList();
         }
 
+        /// <summary>
+        /// Launches the Update Invoice form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void UpdateInvoiceBtn_Click(object sender, EventArgs e)
         {
             UpdateInvoiceForm updateInvoiceForm = new UpdateInvoiceForm();
@@ -110,6 +158,11 @@ namespace LumberInventoryManager
             UpdateInvoiceList();
         }
 
+        /// <summary>
+        /// Opens Microsoft Excel to view spreadsheet of the invoice.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ViewInvoiceBtn_Click(object sender, EventArgs e)
         {
             Invoice invoice = (Invoice)invoiceListBox.SelectedItem;

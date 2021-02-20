@@ -11,6 +11,9 @@ using System.Windows.Forms;
 
 namespace LumberInventoryManager
 {
+    /// <summary>
+    /// Adds a product to the database.
+    /// </summary>
     public partial class AddProduct : Form
     {
         private const int WhiteWood = 1;
@@ -24,6 +27,11 @@ namespace LumberInventoryManager
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Button to add a product to the database.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddBtn_Click(object sender, EventArgs e)
         {
             if (Validator.IsByte(heightTxtBox.Text) && Validator.IsByte(widthTxtBox.Text) && 
@@ -79,6 +87,10 @@ namespace LumberInventoryManager
             
         }
 
+        /// <summary>
+        /// Adds a product with the category White Wood.
+        /// </summary>
+        /// <param name="product"></param>
         private void AddProductToDatabase(Product product)
         {
             try
@@ -101,6 +113,12 @@ namespace LumberInventoryManager
             }
         }
 
+        /// <summary>
+        /// Adds a product with multiple categories.
+        /// </summary>
+        /// <param name="p"></param>
+        /// <param name="treatmentLevel"></param>
+        /// <param name="treatmentType"></param>
         private void AddProductToDatabase(Product p, int treatmentLevel, int treatmentType)
         {
             try
@@ -125,6 +143,9 @@ namespace LumberInventoryManager
             }
         }
 
+        /// <summary>
+        /// Clears Textboxes and Checkboxes once form is submitted.
+        /// </summary>
         private void ClearTxtBoxesAndCheckBoxes()
         {
             heightTxtBox.Text = "";
@@ -144,11 +165,21 @@ namespace LumberInventoryManager
             ccaCheckBox.Enabled = true;
         }
 
+        /// <summary>
+        /// Closes Form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CancelBtn_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+        /// <summary>
+        /// Unchecks certain categories once White Wood is checked.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void WwCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (wwCheckBox.Checked)
@@ -169,6 +200,11 @@ namespace LumberInventoryManager
             }
         }
 
+        /// <summary>
+        /// Unchecks certain categories once .25 is checked.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TwoFiveCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (twoFiveCheckBox.Checked)
@@ -183,6 +219,11 @@ namespace LumberInventoryManager
             }
         }
 
+        /// <summary>
+        /// Unchecks certain categories once .40 is checked.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FourOCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (fourOCheckBox.Checked)
@@ -197,6 +238,11 @@ namespace LumberInventoryManager
             }
         }
 
+        /// <summary>
+        /// Unchecks certain categories once .60 is checked.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SixOCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (sixOCheckBox.Checked)
@@ -211,6 +257,11 @@ namespace LumberInventoryManager
             }
         }
 
+        /// <summary>
+        /// Unchecks CCA (If checked) if ACQ gets checked.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AcqCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (acqCheckBox.Checked)
@@ -224,6 +275,11 @@ namespace LumberInventoryManager
             }
         }
 
+        /// <summary>
+        /// Unchecks ACQ (If checked) if CCA gets checked.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CcaCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (ccaCheckBox.Checked)
@@ -237,6 +293,9 @@ namespace LumberInventoryManager
             }
         }
 
+        /// <summary>
+        /// Checks for required checkboxes to be checked.
+        /// </summary>
         private void CheckIfAllCheckBoxesUnchecked()
         {
             if (!twoFiveCheckBox.Checked && !fourOCheckBox.Checked 

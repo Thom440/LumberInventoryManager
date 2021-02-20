@@ -13,6 +13,9 @@ namespace LumberInventoryManager
 {
     public partial class UpdateInvoiceForm : Form
     {
+        /// <summary>
+        /// Adds products to an invoice.
+        /// </summary>
         public UpdateInvoiceForm()
         {
             InitializeComponent();
@@ -29,6 +32,11 @@ namespace LumberInventoryManager
 
         }
 
+        /// <summary>
+        /// Adds a product to an invoice.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddBtn_Click(object sender, EventArgs e)
         {
             Invoice invoice = (Invoice)invoiceCmbBox.SelectedItem;
@@ -71,11 +79,21 @@ namespace LumberInventoryManager
             }
         }
 
+        /// <summary>
+        /// Closes form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CloseBtn_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+        /// <summary>
+        /// Sets a ship date and adjusts in stock quantity and sold quantities.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ProductShippedBtn_Click(object sender, EventArgs e)
         {
             Invoice invoice = (Invoice)invoiceCmbBox.SelectedItem;

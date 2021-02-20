@@ -62,6 +62,11 @@ namespace LumberInventoryManager
             }
         }
 
+        /// <summary>
+        /// Checks if input is able to be converted to an Int.
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public static bool IsInt(string input)
         {
             try
