@@ -142,7 +142,7 @@ namespace LumberInventoryManager
                 worksheet.Cells[6, 1] = customer.City + ", " + customer.State + " " + customer.ZipCode;
 
                 worksheet.Cells[7, 2] = "Product";
-                worksheet.Cells[7, 3] = "Quanity";
+                worksheet.Cells[7, 3] = "Quantity";
 
                 // Goes through a loop and fills in product information
                 int count = 8;
@@ -156,7 +156,7 @@ namespace LumberInventoryManager
                 count++;
 
                 worksheet.Cells[count, column] = "Date Shipped:";
-                worksheet.Cells[count + 1, column + 1] = invoice.ShipDate;
+                worksheet.Cells[count + 1, column] = invoice.ShipDate;
 
                 // Adjusts all the cells size to fit the text
                 worksheet.Columns.AutoFit();

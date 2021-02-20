@@ -77,5 +77,15 @@ namespace LumberInventoryManager
         {
             Close();
         }
+
+        private void ProductShippedBtn_Click(object sender, EventArgs e)
+        {
+            Invoice invoice = (Invoice)invoiceCmbBox.SelectedItem;
+            if (invoice != null)
+            {
+                invoice.ShipDate = DateTime.Now;
+                ProductDb.Update(invoice);
+            }
+        }
     }
 }
