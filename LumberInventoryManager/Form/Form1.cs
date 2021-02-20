@@ -116,10 +116,13 @@ namespace LumberInventoryManager
             Worksheet worksheet = (Worksheet)workbook.Sheets[1];
             worksheet.Name = "Worksheet";
 
-            // Formats the columns to be bold
+            // Formats the columns to be bold and font to 20
             worksheet.Cells[1, 1].EntireColumn.Font.Bold = true;
+            worksheet.Cells[1, 1].EntireColumn.Font.Size = 20;
             worksheet.Cells[1, 2].EntireColumn.Font.Bold = true;
+            worksheet.Cells[1, 2].EntireColumn.Font.Size = 20;
             worksheet.Cells[1, 3].EntireColumn.Font.Bold = true;
+            worksheet.Cells[1, 3].EntireColumn.Font.Size = 20;
 
             // Fills in the cells with the invoice number and customer information
             worksheet.Cells[1, 1] = "Invoice number: " + invoice.InvoiceID;
