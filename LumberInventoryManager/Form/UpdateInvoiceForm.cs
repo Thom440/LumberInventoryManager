@@ -95,6 +95,11 @@ namespace LumberInventoryManager
                     products[i].Sold -= lineItems[i].Quantity;
                     ProductDb.Update(products[i]);
                 }
+                messageLbl.Text = $"Ship Date set to {DateTime.Now}";
+            }
+            else
+            {
+                MessageBox.Show("No invoice selected", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }
