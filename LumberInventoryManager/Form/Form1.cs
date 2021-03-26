@@ -1,8 +1,11 @@
-﻿using Microsoft.Office.Interop.Excel;
+﻿using LumberInventoryManager.Migrations;
+using Microsoft.Office.Interop.Excel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
+using System.Data.Entity.Core.Objects;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,6 +22,7 @@ namespace LumberInventoryManager
         public Form1()
         {
             InitializeComponent();
+            Database.SetInitializer<LumberContext>(new MigrateDatabaseToLatestVersion<LumberContext, Configuration>());
         }
 
         /// <summary>
